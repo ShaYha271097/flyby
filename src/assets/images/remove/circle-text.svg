@@ -1,0 +1,53 @@
+<svg 
+id="Layer_1" 
+data-name="Layer 1" 
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+viewBox="0 0 211.87 211.87">
+    <defs>
+        <style>
+            .cls-1{stroke:#fff;stroke-miterlimit:10;fill:url(#linear-gradient);}.cls-2{font-size:15.74px;fill:#fff;font-family:MyriadPro-Regular, Myriad Pro;}
+        </style>
+    <linearGradient id="linear-gradient" x1="177.98" y1="33.88" x2="32.54" y2="179.32" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#4da2ea"/>
+    <stop offset="0.39" stop-color="#5ec1ad"/><stop offset="0.71" stop-color="#73e86b"/>
+    <stop offset="1" stop-color="#7cf95b"/>
+    </linearGradient></defs>
+    <path class="cls-1" d="M105.93.5A105.44,105.44,0,1,0,211.37,105.93,105.43,105.43,0,0,0,105.93.5Zm0,185.38a79.95,79.95,0,1,1,79.95-79.95A80,80,0,0,1,105.93,185.88Z"/>
+    <text class="cls-2" transform="matrix(0.29, -0.96, 0.96, 0.29, 21.31, 86.19)">D</text>
+    <text class="cls-2" transform="matrix(0.38, -0.92, 0.92, 0.38, 24.39, 76.11)">a</text>
+    <text class="cls-2" transform="translate(27.31 69.03) rotate(-61.92)">n</text>
+    <text class="cls-2" transform="translate(31.44 61.29) rotate(-56.11)">g</text>
+    <text class="cls-2" transform="translate(36.44 54.02) rotate(-52.09)"> </text>
+    <text class="cls-2" transform="translate(38.44 51.24) rotate(-47.61)">G</text>
+    <text class="cls-2" transform="matrix(0.73, -0.68, 0.68, 0.73, 45.42, 43.79)">i</text>
+    <text class="cls-2" transform="matrix(0.77, -0.63, 0.63, 0.77, 48.08, 41.22)">a</text>
+    <text class="cls-2" transform="translate(53.98 36.35) rotate(-33.91)">n</text>
+    <text class="cls-2" transform="translate(61.29 31.44) rotate(-28.08)">g</text>
+    <text class="cls-2" transform="translate(69.14 27.37) rotate(-24.02)"> </text>
+    <text class="cls-2" transform="translate(72.2 25.93) rotate(-20.42)">L</text>
+    <text class="cls-2" transform="translate(78.82 23.45) rotate(-15.72)">y</text>
+    <text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 85.97, 21.51)"> </text>
+    <text class="cls-2" transform="translate(89.27 20.78) rotate(-9.41)">-</text>
+    <text class="cls-2" transform="translate(94.05 20) rotate(-6.7)"> </text>
+    <text class="cls-2" transform="translate(97.41 19.47) rotate(-2.13)">D</text>
+    <text class="cls-2" transform="translate(107.99 19.16) rotate(3.81)">a</text>
+    <text class="cls-2" transform="translate(115.59 19.63) rotate(9.21)">n</text>
+    <text class="cls-2" transform="translate(124.29 21.05) rotate(15.08)">g</text>
+    <text class="cls-2" transform="translate(132.8 23.44) rotate(19.14)"> </text>
+    <text class="cls-2" transform="translate(136.06 24.43) rotate(23.67)">G</text>
+    <text class="cls-2" transform="translate(145.36 28.65) rotate(28.3)">i</text>
+    <text class="cls-2" transform="translate(148.63 30.34) rotate(32.02)">a</text>
+    <text class="cls-2" transform="matrix(0.79, 0.61, -0.61, 0.79, 155.13, 34.38)">n</text>
+    <text class="cls-2" transform="translate(162.13 39.74) rotate(43.25)">g</text>
+    <text class="cls-2" transform="matrix(0.68, 0.73, -0.73, 0.68, 168.51, 45.87)"> </text>
+    <text class="cls-2" transform="matrix(0.63, 0.78, -0.78, 0.63, 170.83, 48.29)">L</text>
+    <text class="cls-2" transform="translate(175.29 53.75) rotate(55.44)">y</text>
+    <text class="cls-2" transform="translate(179.47 59.89) rotate(59.49)">-</text>
+    <text class="cls-2" transform="translate(181.92 64.07) rotate(62.21)"> </text>
+    <text class="cls-2" transform="translate(183.55 67.04) rotate(65.8)">L</text>
+    <text class="cls-2" transform="translate(186.44 73.43) rotate(70.46)">y</text>
+    <text class="cls-2" transform="translate(188.88 80.45) rotate(74.55)">-</text>
+    <text class="cls-2" transform="matrix(0.2, 0.98, -0.98, 0.2, 190.22, 85.12)">L</text>
+    <text class="cls-2" transform="translate(191.62 92.03) rotate(83.3)">y</text>
+</svg>

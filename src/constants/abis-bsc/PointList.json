@@ -1,0 +1,1120 @@
+{
+  "address": "0xbBb604c6e20977414fB6AaD327085c5f21C9Cd07",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AdminRoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AdminRoleRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "MinterRoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "MinterRoleRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "OperatorRoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "OperatorRoleRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "oldPoints",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newPoints",
+          "type": "uint256"
+        }
+      ],
+      "name": "PointsUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "previousAdminRole",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "newAdminRole",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RoleAdminChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleRevoked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "SmartContractRoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "SmartContractRoleRemoved",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DEFAULT_ADMIN_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MINTER_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "OPERATOR_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SMART_CONTRACT_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "addAdminRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "addMinterRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "addOperatorRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "addSmartContractRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRoleAdmin",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRoleMember",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRoleMemberCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "grantRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "hasAdminRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "hasMinterRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "hasOperatorRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "hasPoints",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "hasSmartContractRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        }
+      ],
+      "name": "initAccessControls",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        }
+      ],
+      "name": "initPointList",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "isInList",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "points",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "removeAdminRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "removeMinterRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "removeOperatorRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "removeSmartContractRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "renounceRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "revokeRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_accounts",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_amounts",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "setPoints",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalPoints",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x468fcc505226434f3333f2dc6bcd7d9fa3d2a0794786a8e8fe15a8b0a46d4b21",
+  "receipt": {
+    "to": null,
+    "from": "0x00B91B2F8aFE87FCDc2b3fFA9ee2278cd1E4DDf8",
+    "contractAddress": "0xbBb604c6e20977414fB6AaD327085c5f21C9Cd07",
+    "transactionIndex": 2,
+    "gasUsed": "1205935",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x86b8b70e8dede6d57dff1ed85f440842986fa3b9a2d11d1f3d6e57dc40870642",
+    "transactionHash": "0x468fcc505226434f3333f2dc6bcd7d9fa3d2a0794786a8e8fe15a8b0a46d4b21",
+    "logs": [],
+    "blockNumber": 14440457,
+    "cumulativeGasUsed": "1373743",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "0bb2481c0a33b756a35d8c75b9e1dee6",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AdminRoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AdminRoleRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"MinterRoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"MinterRoleRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"OperatorRoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"OperatorRoleRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"oldPoints\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newPoints\",\"type\":\"uint256\"}],\"name\":\"PointsUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"SmartContractRoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"SmartContractRoleRemoved\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MINTER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"OPERATOR_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SMART_CONTRACT_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"addAdminRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"addMinterRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"addOperatorRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"addSmartContractRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getRoleMember\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleMemberCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"hasAdminRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"hasMinterRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"hasOperatorRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"hasPoints\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"hasSmartContractRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"}],\"name\":\"initAccessControls\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"}],\"name\":\"initPointList\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"isInList\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"points\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"removeAdminRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"removeMinterRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"removeOperatorRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"removeSmartContractRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_amounts\",\"type\":\"uint256[]\"}],\"name\":\"setPoints\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalPoints\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addAdminRole(address)\":{\"details\":\"The sender must have the admin role.\",\"params\":{\"_address\":\"EOA or contract receiving the new role.\"}},\"addMinterRole(address)\":{\"details\":\"The sender must have the admin role\",\"params\":{\"_address\":\"EOA or contract receiving the new role\"}},\"addOperatorRole(address)\":{\"details\":\"The sender must have the admin role\",\"params\":{\"_address\":\"EOA or contract receiving the new role\"}},\"addSmartContractRole(address)\":{\"details\":\"The sender must have the admin role\",\"params\":{\"_address\":\"EOA or contract receiving the new role\"}},\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}.\"},\"getRoleMember(bytes32,uint256)\":{\"details\":\"Returns one of the accounts that have `role`. `index` must be a value between 0 and {getRoleMemberCount}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information.\"},\"getRoleMemberCount(bytes32)\":{\"details\":\"Returns the number of accounts that have `role`. Can be used together with {getRoleMember} to enumerate all bearers of a role.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role.\"},\"hasAdminRole(address)\":{\"params\":{\"_address\":\"EOA or contract being checked.\"},\"returns\":{\"_0\":\"bool True if the account has the role or false if it does not.\"}},\"hasMinterRole(address)\":{\"params\":{\"_address\":\"EOA or contract being checked\"},\"returns\":{\"_0\":\"bool True if the account has the role or false if it does not\"}},\"hasOperatorRole(address)\":{\"params\":{\"_address\":\"EOA or contract being checked\"},\"returns\":{\"_0\":\"bool True if the account has the role or false if it does not\"}},\"hasPoints(address,uint256)\":{\"params\":{\"_account\":\"Account address.\",\"_amount\":\"Desired amount of points.\"},\"returns\":{\"_0\":\"bool True or False.\"}},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"hasSmartContractRole(address)\":{\"params\":{\"_address\":\"EOA or contract being checked\"},\"returns\":{\"_0\":\"bool True if the account has the role or false if it does not\"}},\"initAccessControls(address)\":{\"params\":{\"_admin\":\"Admins address.\"}},\"initPointList(address)\":{\"params\":{\"_admin\":\"Admins address.\"}},\"isInList(address)\":{\"params\":{\"_account\":\"Account address.\"},\"returns\":{\"_0\":\"bool True or False.\"}},\"removeAdminRole(address)\":{\"details\":\"The sender must have the admin role.\",\"params\":{\"_address\":\"EOA or contract affected.\"}},\"removeMinterRole(address)\":{\"details\":\"The sender must have the admin role\",\"params\":{\"_address\":\"EOA or contract affected\"}},\"removeOperatorRole(address)\":{\"details\":\"The sender must have the admin role\",\"params\":{\"_address\":\"EOA or contract affected\"}},\"removeSmartContractRole(address)\":{\"details\":\"The sender must have the admin role\",\"params\":{\"_address\":\"EOA or contract affected\"}},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`.\"},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role.\"},\"setPoints(address[],uint256[])\":{\"params\":{\"_accounts\":\"An array of accounts.\",\"_amounts\":\"An array of corresponding amounts.\"}}},\"version\":1},\"userdoc\":{\"events\":{\"MinterRoleGranted(address,address)\":{\"notice\":\"Events for adding and removing various roles\"}},\"kind\":\"user\",\"methods\":{\"MINTER_ROLE()\":{\"notice\":\"Role definitions\"},\"addAdminRole(address)\":{\"notice\":\"Grants the admin role to an address.\"},\"addMinterRole(address)\":{\"notice\":\"Grants the minter role to an address\"},\"addOperatorRole(address)\":{\"notice\":\"Grants the operator role to an address\"},\"addSmartContractRole(address)\":{\"notice\":\"Grants the smart contract role to an address\"},\"hasAdminRole(address)\":{\"notice\":\"Used to check whether an address has the admin role.\"},\"hasMinterRole(address)\":{\"notice\":\"Used to check whether an address has the minter role\"},\"hasOperatorRole(address)\":{\"notice\":\"Used to check whether an address has the operator role\"},\"hasPoints(address,uint256)\":{\"notice\":\"Checks if account has more or equal points as the number given.\"},\"hasSmartContractRole(address)\":{\"notice\":\"Used to check whether an address has the smart contract role\"},\"initAccessControls(address)\":{\"notice\":\"Initializes access controls.\"},\"initPointList(address)\":{\"notice\":\"Initializes point list with admin address.\"},\"isInList(address)\":{\"notice\":\"Checks if account address is in the list (has any points).\"},\"removeAdminRole(address)\":{\"notice\":\"Removes the admin role from an address.\"},\"removeMinterRole(address)\":{\"notice\":\"Removes the minter role from an address\"},\"removeOperatorRole(address)\":{\"notice\":\"Removes the operator role from an address\"},\"removeSmartContractRole(address)\":{\"notice\":\"Removes the smart contract role from an address\"},\"setPoints(address[],uint256[])\":{\"notice\":\"Sets points to accounts in one batch.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Access/PointList.sol\":\"PointList\"},\"evmVersion\":\"istanbul\",\"libraries\":{\":__CACHE_BREAKER__\":\"0x00000000d41867734bbee4c6863d9255b2b06ac1\"},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Access/FLYBYAccessControls.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"./FLYBYAdminAccess.sol\\\";\\n\\ncontract FLYBYAccessControls is FLYBYAdminAccess {\\n    /// @notice Role definitions\\n    bytes32 public constant MINTER_ROLE = keccak256(\\\"MINTER_ROLE\\\");\\n    bytes32 public constant SMART_CONTRACT_ROLE = keccak256(\\\"SMART_CONTRACT_ROLE\\\");\\n    bytes32 public constant OPERATOR_ROLE = keccak256(\\\"OPERATOR_ROLE\\\");\\n\\n    /// @notice Events for adding and removing various roles\\n\\n    event MinterRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event MinterRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event OperatorRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event OperatorRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event SmartContractRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event SmartContractRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    /**\\n     * @notice Used to check whether an address has the minter role\\n     * @param _address EOA or contract being checked\\n     * @return bool True if the account has the role or false if it does not\\n     */\\n    function hasMinterRole(address _address) public view returns (bool) {\\n        return hasRole(MINTER_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Used to check whether an address has the smart contract role\\n     * @param _address EOA or contract being checked\\n     * @return bool True if the account has the role or false if it does not\\n     */\\n    function hasSmartContractRole(address _address) public view returns (bool) {\\n        return hasRole(SMART_CONTRACT_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Used to check whether an address has the operator role\\n     * @param _address EOA or contract being checked\\n     * @return bool True if the account has the role or false if it does not\\n     */\\n    function hasOperatorRole(address _address) public view returns (bool) {\\n        return hasRole(OPERATOR_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Grants the minter role to an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract receiving the new role\\n     */\\n    function addMinterRole(address _address) external {\\n        grantRole(MINTER_ROLE, _address);\\n        emit MinterRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the minter role from an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract affected\\n     */\\n    function removeMinterRole(address _address) external {\\n        revokeRole(MINTER_ROLE, _address);\\n        emit MinterRoleRemoved(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Grants the smart contract role to an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract receiving the new role\\n     */\\n    function addSmartContractRole(address _address) external {\\n        grantRole(SMART_CONTRACT_ROLE, _address);\\n        emit SmartContractRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the smart contract role from an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract affected\\n     */\\n    function removeSmartContractRole(address _address) external {\\n        revokeRole(SMART_CONTRACT_ROLE, _address);\\n        emit SmartContractRoleRemoved(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Grants the operator role to an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract receiving the new role\\n     */\\n    function addOperatorRole(address _address) external {\\n        grantRole(OPERATOR_ROLE, _address);\\n        emit OperatorRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the operator role from an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract affected\\n     */\\n    function removeOperatorRole(address _address) external {\\n        revokeRole(OPERATOR_ROLE, _address);\\n        emit OperatorRoleRemoved(_address, _msgSender());\\n    }\\n}\",\"keccak256\":\"0x15d26912cdf5e68c3bf91040671f5c6f863e32b72906663c4007777abcb5d1e3\",\"license\":\"MIT\"},\"contracts/Access/FLYBYAdminAccess.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../OpenZeppelin/access/AccessControl.sol\\\";\\n\\ncontract FLYBYAdminAccess is AccessControl {\\n    bool private initAccess;\\n    event AdminRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event AdminRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    /**\\n     * @notice Initializes access controls.\\n     * @param _admin Admins address.\\n     */\\n    function initAccessControls(address _admin) public {\\n        require(!initAccess, \\\"Already initialised\\\");\\n        require(_admin != address(0), \\\"Incorrect input\\\");\\n        _setupRole(DEFAULT_ADMIN_ROLE, _admin);\\n        initAccess = true;\\n    }\\n\\n    /**\\n     * @notice Used to check whether an address has the admin role.\\n     * @param _address EOA or contract being checked.\\n     * @return bool True if the account has the role or false if it does not.\\n     */\\n    function hasAdminRole(address _address) public view returns (bool) {\\n        return hasRole(DEFAULT_ADMIN_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Grants the admin role to an address.\\n     * @dev The sender must have the admin role.\\n     * @param _address EOA or contract receiving the new role.\\n     */\\n    function addAdminRole(address _address) external {\\n        grantRole(DEFAULT_ADMIN_ROLE, _address);\\n        emit AdminRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the admin role from an address.\\n     * @dev The sender must have the admin role.\\n     * @param _address EOA or contract affected.\\n     */\\n    function removeAdminRole(address _address) external {\\n        revokeRole(DEFAULT_ADMIN_ROLE, _address);\\n        emit AdminRoleRemoved(_address, _msgSender());\\n    }\\n}\",\"keccak256\":\"0x043cc7e6c78cafc685a1348e2af7fb6d49dd66383605b5265383a795f9388f9a\",\"license\":\"MIT\"},\"contracts/Access/PointList.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../OpenZeppelin/math/SafeMath.sol\\\";\\nimport \\\"./FLYBYAccessControls.sol\\\";\\nimport \\\"../Interfaces/IPointList.sol\\\";\\n\\ncontract PointList is IPointList, FLYBYAccessControls {\\n    using SafeMath for uint;\\n    \\n    mapping(address => uint256) public points;\\n    \\n    uint256 public totalPoints;\\n    \\n    event PointsUpdated(address indexed account, uint256 oldPoints, uint256 newPoints);\\n\\n    /**\\n     * @notice Initializes point list with admin address.\\n     * @param _admin Admins address.\\n     */\\n    function initPointList(address _admin) public override {\\n        initAccessControls(_admin);\\n    }\\n\\n    /**\\n     * @notice Checks if account address is in the list (has any points).\\n     * @param _account Account address.\\n     * @return bool True or False.\\n     */\\n    function isInList(address _account) public view override returns (bool) {\\n        return points[_account] > 0 ;\\n    }\\n\\n    /**\\n     * @notice Checks if account has more or equal points as the number given.\\n     * @param _account Account address.\\n     * @param _amount Desired amount of points.\\n     * @return bool True or False.\\n     */\\n    function hasPoints(address _account, uint256 _amount) public view override returns (bool) {\\n        return points[_account] >= _amount ;\\n    }\\n\\n    /**\\n     * @notice Sets points to accounts in one batch.\\n     * @param _accounts An array of accounts.\\n     * @param _amounts An array of corresponding amounts.\\n     */\\n    function setPoints(address[] memory _accounts, uint256[] memory _amounts) external override {\\n        require(hasAdminRole(msg.sender) || hasOperatorRole(msg.sender), \\\"PointList.setPoints: Sender must be operator\\\");\\n        require(_accounts.length != 0, \\\"PointList.setPoints: empty array\\\");\\n        require(_accounts.length == _amounts.length, \\\"PointList.setPoints: incorrect array length\\\");\\n        for (uint i = 0; i < _accounts.length; i++) {\\n            address account = _accounts[i];\\n            uint256 amount = _amounts[i];\\n            uint256 previousPoints = points[account];\\n\\n            if (amount != previousPoints) {\\n                points[account] = amount;\\n                totalPoints = totalPoints.sub(previousPoints).add(amount);\\n                emit PointsUpdated(account, previousPoints, amount);\\n            }\\n        }\\n    }\\n}\",\"keccak256\":\"0x3073639c6351109329ab02cd091be2bd2a5a92253cf43019cb14008bdb9acb6d\",\"license\":\"MIT\"},\"contracts/Interfaces/IPointList.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\ninterface IPointList {\\n    function isInList(address account) external view returns (bool);\\n    function hasPoints(address account, uint256 amount) external view  returns (bool);\\n    function setPoints(\\n        address[] memory accounts,\\n        uint256[] memory amounts\\n    ) external; \\n    function initPointList(address accessControl) external ;\\n\\n}\\n\",\"keccak256\":\"0x5ca6189f48425c8ef1041cecd626b6c6f66af41464fe8e149554d41632544e5c\",\"license\":\"MIT\"},\"contracts/OpenZeppelin/access/AccessControl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\nimport \\\"../utils/EnumerableSet.sol\\\";\\n\\nabstract contract AccessControl is Context {\\n    using EnumerableSet for EnumerableSet.AddressSet;\\n\\n    struct RoleData {\\n        EnumerableSet.AddressSet members;\\n        bytes32 adminRole;\\n    }\\n\\n    mapping (bytes32 => RoleData) private _roles;\\n\\n    bytes32 public constant DEFAULT_ADMIN_ROLE = 0x00;\\n\\n    /**\\n     * @dev Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole`\\n     *\\n     * `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite\\n     * {RoleAdminChanged} not being emitted signaling this.\\n     *\\n     * _Available since v3.1._\\n     */\\n    event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole);\\n\\n    /**\\n     * @dev Emitted when `account` is granted `role`.\\n     *\\n     * `sender` is the account that originated the contract call, an admin role\\n     * bearer except when using {_setupRole}.\\n     */\\n    event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender);\\n\\n    /**\\n     * @dev Emitted when `account` is revoked `role`.\\n     *\\n     * `sender` is the account that originated the contract call:\\n     *   - if using `revokeRole`, it is the admin role bearer\\n     *   - if using `renounceRole`, it is the role bearer (i.e. `account`)\\n     */\\n    event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender);\\n\\n    /**\\n     * @dev Returns `true` if `account` has been granted `role`.\\n     */\\n    function hasRole(bytes32 role, address account) public view returns (bool) {\\n        return _roles[role].members.contains(account);\\n    }\\n\\n    /**\\n     * @dev Returns the number of accounts that have `role`. Can be used\\n     * together with {getRoleMember} to enumerate all bearers of a role.\\n     */\\n    function getRoleMemberCount(bytes32 role) public view returns (uint256) {\\n        return _roles[role].members.length();\\n    }\\n\\n    /**\\n     * @dev Returns one of the accounts that have `role`. `index` must be a\\n     * value between 0 and {getRoleMemberCount}, non-inclusive.\\n     *\\n     * Role bearers are not sorted in any particular way, and their ordering may\\n     * change at any point.\\n     *\\n     * WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure\\n     * you perform all queries on the same block. See the following\\n     * https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post]\\n     * for more information.\\n     */\\n    function getRoleMember(bytes32 role, uint256 index) public view returns (address) {\\n        return _roles[role].members.at(index);\\n    }\\n\\n    /**\\n     * @dev Returns the admin role that controls `role`. See {grantRole} and\\n     * {revokeRole}.\\n     *\\n     * To change a role's admin, use {_setRoleAdmin}.\\n     */\\n    function getRoleAdmin(bytes32 role) public view returns (bytes32) {\\n        return _roles[role].adminRole;\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function grantRole(bytes32 role, address account) public virtual {\\n        require(hasRole(_roles[role].adminRole, _msgSender()), \\\"AccessControl: sender must be an admin to grant\\\");\\n\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from `account`.\\n     *\\n     * If `account` had been granted `role`, emits a {RoleRevoked} event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function revokeRole(bytes32 role, address account) public virtual {\\n        require(hasRole(_roles[role].adminRole, _msgSender()), \\\"AccessControl: sender must be an admin to revoke\\\");\\n\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from the calling account.\\n     *\\n     * Roles are often managed via {grantRole} and {revokeRole}: this function's\\n     * purpose is to provide a mechanism for accounts to lose their privileges\\n     * if they are compromised (such as when a trusted device is misplaced).\\n     *\\n     * If the calling account had been granted `role`, emits a {RoleRevoked}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must be `account`.\\n     */\\n    function renounceRole(bytes32 role, address account) public virtual {\\n        require(account == _msgSender(), \\\"AccessControl: can only renounce roles for self\\\");\\n\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event. Note that unlike {grantRole}, this function doesn't perform any\\n     * checks on the calling account.\\n     *\\n     * [WARNING]\\n     * ====\\n     * This function should only be called from the constructor when setting\\n     * up the initial roles for the system.\\n     *\\n     * Using this function in any other way is effectively circumventing the admin\\n     * system imposed by {AccessControl}.\\n     * ====\\n     */\\n    function _setupRole(bytes32 role, address account) internal virtual {\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Sets `adminRole` as ``role``'s admin role.\\n     *\\n     * Emits a {RoleAdminChanged} event.\\n     */\\n    function _setRoleAdmin(bytes32 role, bytes32 adminRole) internal virtual {\\n        emit RoleAdminChanged(role, _roles[role].adminRole, adminRole);\\n        _roles[role].adminRole = adminRole;\\n    }\\n\\n    function _grantRole(bytes32 role, address account) private {\\n        if (_roles[role].members.add(account)) {\\n            emit RoleGranted(role, account, _msgSender());\\n        }\\n    }\\n\\n    function _revokeRole(bytes32 role, address account) private {\\n        if (_roles[role].members.remove(account)) {\\n            emit RoleRevoked(role, account, _msgSender());\\n        }\\n    }\\n}\",\"keccak256\":\"0x70a4ac51d4857ce35422d73f70cbec83f00f568e1f95a804dcfbbe509de5a82c\",\"license\":\"MIT\"},\"contracts/OpenZeppelin/math/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n// CAUTION\\n// This version of SafeMath should only be used with Solidity 0.8 or later,\\n// because it relies on the compiler's built in overflow checks.\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations.\\n *\\n * NOTE: `SafeMath` is generally not needed starting with Solidity 0.8, since the compiler\\n * now has built in overflow checking.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryAdd(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            uint256 c = a + b;\\n            if (c < a) return (false, 0);\\n            return (true, c);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the substraction of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function trySub(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            if (b > a) return (false, 0);\\n            return (true, a - b);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMul(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n            // benefit is lost if 'b' is also tested.\\n            // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n            if (a == 0) return (true, 0);\\n            uint256 c = a * b;\\n            if (c / a != b) return (false, 0);\\n            return (true, c);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the division of two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryDiv(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            if (b == 0) return (false, 0);\\n            return (true, a / b);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMod(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            if (b == 0) return (false, 0);\\n            return (true, a % b);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b <= a, \\\"SafeMath: subtraction overflow\\\");\\n        return a - b;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        if (a == 0) return 0;\\n        uint256 c = a + b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b > 0, \\\"SafeMath: division by zero\\\");\\n        return a / b;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b > 0, \\\"SafeMath: modulo by zero\\\");\\n        return a % b;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {trySub}.\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        unchecked {\\n            require(b <= a, errorMessage);\\n            return a - b;\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        unchecked {\\n            require(b > 0, errorMessage);\\n            return a / b;\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting with custom message when dividing by zero.\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {tryMod}.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        unchecked {\\n            require(b > 0, errorMessage);\\n            return a % b;\\n        }\\n    }\\n}\",\"keccak256\":\"0xc164f4d829f092ff01b333a944130288f57aef6666ad50b48c81ef7cc9dee765\",\"license\":\"MIT\"},\"contracts/OpenZeppelin/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address payable) {\\n        return payable(msg.sender);\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\",\"keccak256\":\"0xe0521887b553a6c5bef0acd727645ff69535b60fe7c5947e40f19391307d70d2\",\"license\":\"MIT\"},\"contracts/OpenZeppelin/utils/EnumerableSet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Library for managing\\n * https://en.wikipedia.org/wiki/Set_(abstract_data_type)[sets] of primitive\\n * types.\\n *\\n * Sets have the following properties:\\n *\\n * - Elements are added, removed, and checked for existence in constant time\\n * (O(1)).\\n * - Elements are enumerated in O(n). No guarantees are made on the ordering.\\n *\\n * ```\\n * contract Example {\\n *     // Add the library methods\\n *     using EnumerableSet for EnumerableSet.AddressSet;\\n *\\n *     // Declare a set state variable\\n *     EnumerableSet.AddressSet private mySet;\\n * }\\n * ```\\n *\\n * As of v3.3.0, sets of type `bytes32` (`Bytes32Set`), `address` (`AddressSet`)\\n * and `uint256` (`UintSet`) are supported.\\n */\\nlibrary EnumerableSet {\\n    // To implement this library for multiple types with as little code\\n    // repetition as possible, we write it in terms of a generic Set type with\\n    // bytes32 values.\\n    // The Set implementation uses private functions, and user-facing\\n    // implementations (such as AddressSet) are just wrappers around the\\n    // underlying Set.\\n    // This means that we can only create new EnumerableSets for types that fit\\n    // in bytes32.\\n\\n    struct Set {\\n        // Storage of set values\\n        bytes32[] _values;\\n\\n        // Position of the value in the `values` array, plus 1 because index 0\\n        // means a value is not in the set.\\n        mapping (bytes32 => uint256) _indexes;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function _add(Set storage set, bytes32 value) private returns (bool) {\\n        if (!_contains(set, value)) {\\n            set._values.push(value);\\n            // The value is stored at length-1, but we add 1 to all indexes\\n            // and use 0 as a sentinel value\\n            set._indexes[value] = set._values.length;\\n            return true;\\n        } else {\\n            return false;\\n        }\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function _remove(Set storage set, bytes32 value) private returns (bool) {\\n        // We read and store the value's index to prevent multiple reads from the same storage slot\\n        uint256 valueIndex = set._indexes[value];\\n\\n        if (valueIndex != 0) { // Equivalent to contains(set, value)\\n            // To delete an element from the _values array in O(1), we swap the element to delete with the last one in\\n            // the array, and then remove the last element (sometimes called as 'swap and pop').\\n            // This modifies the order of the array, as noted in {at}.\\n\\n            uint256 toDeleteIndex = valueIndex - 1;\\n            uint256 lastIndex = set._values.length - 1;\\n\\n            // When the value to delete is the last one, the swap operation is unnecessary. However, since this occurs\\n            // so rarely, we still do the swap anyway to avoid the gas cost of adding an 'if' statement.\\n\\n            bytes32 lastvalue = set._values[lastIndex];\\n\\n            // Move the last value to the index where the value to delete is\\n            set._values[toDeleteIndex] = lastvalue;\\n            // Update the index for the moved value\\n            set._indexes[lastvalue] = toDeleteIndex + 1; // All indexes are 1-based\\n\\n            // Delete the slot where the moved value was stored\\n            set._values.pop();\\n\\n            // Delete the index for the deleted slot\\n            delete set._indexes[value];\\n\\n            return true;\\n        } else {\\n            return false;\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function _contains(Set storage set, bytes32 value) private view returns (bool) {\\n        return set._indexes[value] != 0;\\n    }\\n\\n    /**\\n     * @dev Returns the number of values on the set. O(1).\\n     */\\n    function _length(Set storage set) private view returns (uint256) {\\n        return set._values.length;\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function _at(Set storage set, uint256 index) private view returns (bytes32) {\\n        require(set._values.length > index, \\\"EnumerableSet: index out of bounds\\\");\\n        return set._values[index];\\n    }\\n\\n    // Bytes32Set\\n\\n    struct Bytes32Set {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(Bytes32Set storage set, bytes32 value) internal returns (bool) {\\n        return _add(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(Bytes32Set storage set, bytes32 value) internal returns (bool) {\\n        return _remove(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(Bytes32Set storage set, bytes32 value) internal view returns (bool) {\\n        return _contains(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Returns the number of values in the set. O(1).\\n     */\\n    function length(Bytes32Set storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function at(Bytes32Set storage set, uint256 index) internal view returns (bytes32) {\\n        return _at(set._inner, index);\\n    }\\n\\n    // AddressSet\\n\\n    struct AddressSet {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(AddressSet storage set, address value) internal returns (bool) {\\n        return _add(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(AddressSet storage set, address value) internal returns (bool) {\\n        return _remove(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(AddressSet storage set, address value) internal view returns (bool) {\\n        return _contains(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Returns the number of values in the set. O(1).\\n     */\\n    function length(AddressSet storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function at(AddressSet storage set, uint256 index) internal view returns (address) {\\n        return address(uint160(uint256(_at(set._inner, index))));\\n    }\\n\\n\\n    // UintSet\\n\\n    struct UintSet {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(UintSet storage set, uint256 value) internal returns (bool) {\\n        return _add(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(UintSet storage set, uint256 value) internal returns (bool) {\\n        return _remove(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(UintSet storage set, uint256 value) internal view returns (bool) {\\n        return _contains(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Returns the number of values on the set. O(1).\\n     */\\n    function length(UintSet storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function at(UintSet storage set, uint256 index) internal view returns (uint256) {\\n        return uint256(_at(set._inner, index));\\n    }\\n}\",\"keccak256\":\"0x01c748c0e9f9c425f95c8f0e7eb6625675a4fde41b7f5444bcf6b894b375e72c\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506114d9806100206000396000f3fe608060405234801561001057600080fd5b50600436106101da5760003560e01c806391d1485411610104578063ca15c873116100a2578063e6594abd11610071578063e6594abd146103d3578063f5b541a6146103e6578063fa33bcf3146103ee578063fc4e3e0a14610401576101da565b8063ca15c87314610392578063d5391393146103a5578063d547741f146103ad578063dccfe310146103c0576101da565b8063a217fddf116100de578063a217fddf14610351578063adbf377614610359578063b7928b1d1461036c578063c395fcb31461037f576101da565b806391d14854146103185780639478941c1461032b5780639a80c4a11461033e576101da565b806336568abe1161017c5780636595171c1161014b5780636595171c146102ca578063857d2608146102dd5780638a845fc0146102e55780639010d07c146102f8576101da565b806336568abe146102895780633f16431a1461029c57806354f1e126146102af578063567142be146102c2576101da565b8063248a9ca3116101b8578063248a9ca31461022e578063283ba19b1461024e5780632f2ff15d14610263578063358b816614610276576101da565b8063099db017146101df578063113b0ab2146102085780631cd53d551461021b575b600080fd5b6101f26101ed366004610f24565b610414565b6040516101ff919061109d565b60405180910390f35b6101f2610216366004610f24565b610436565b6101f2610229366004610f3e565b610450565b61024161023c366004611025565b610473565b6040516101ff91906110a8565b61026161025c366004610f24565b610488565b005b61026161027136600461103d565b610494565b610241610284366004610f24565b6104e5565b61026161029736600461103d565b6104f7565b6102616102aa366004610f24565b610539565b6102616102bd366004610f24565b61059b565b6102416105fd565b6102616102d8366004610f24565b610603565b610241610658565b6102616102f3366004610f24565b61066a565b61030b610306366004611068565b6106cc565b6040516101ff9190611089565b6101f261032636600461103d565b6106eb565b610261610339366004610f24565b610703565b61026161034c366004610f67565b610765565b610241610905565b610261610367366004610f24565b61090a565b61026161037a366004610f24565b61096c565b6101f261038d366004610f24565b6109ce565b6102416103a0366004611025565b6109da565b6102416109f1565b6102616103bb36600461103d565b610a03565b6102616103ce366004610f24565b610a3d565b6102616103e1366004610f24565b610a92565b610241610af5565b6101f26103fc366004610f24565b610b07565b6101f261040f366004610f24565b610b24565b600061042e600080516020611484833981519152836106eb565b90505b919050565b600061042e600080516020611444833981519152836106eb565b6001600160a01b0382166000908152600260205260409020548111155b92915050565b60009081526020819052604090206002015490565b61049181610a92565b50565b6000828152602081905260409020600201546104b290610326610b3e565b6104d75760405162461bcd60e51b81526004016104ce90611120565b60405180910390fd5b6104e18282610b42565b5050565b60026020526000908152604090205481565b6104ff610b3e565b6001600160a01b0316816001600160a01b03161461052f5760405162461bcd60e51b81526004016104ce906112ed565b6104e18282610bab565b61055160008051602061144483398151915282610494565b610559610b3e565b6001600160a01b0316816001600160a01b03167f1d5f9ec24c6f91be922ea13ceaad919ad6554a41b5c26087f96289a9baf98ad260405160405180910390a350565b6105b360008051602061148483398151915282610a03565b6105bb610b3e565b6001600160a01b0316816001600160a01b03167f56692a161ffec953ddf9def93b958ea8d1ec95e21b80870c66be91a4374dc4e360405160405180910390a350565b60035481565b61060e600082610494565b610616610b3e565b6001600160a01b0316816001600160a01b03167f2570ac42fd8b322dc453ada624dc2ed0e9bdd67f16f201a25bbd30468f2aa18760405160405180910390a350565b60008051602061144483398151915281565b61068260008051602061144483398151915282610a03565b61068a610b3e565b6001600160a01b0316816001600160a01b03167fe5f1aa9e528307345194b88b24a32401c13926e0823060f1049d9b26c0bb62b260405160405180910390a350565b60008281526020819052604081206106e49083610c14565b9392505050565b60008281526020819052604081206106e49083610c20565b61071b60008051602061146483398151915282610a03565b610723610b3e565b6001600160a01b0316816001600160a01b03167f70b25138b6fadeb9992d18b9653564271823e34b3e3257515d12a6d4b15fcddf60405160405180910390a350565b61076e336109ce565b8061077d575061077d33610b24565b6107995760405162461bcd60e51b81526004016104ce90611278565b81516107b75760405162461bcd60e51b81526004016104ce9061133c565b80518251146107d85760405162461bcd60e51b81526004016104ce906111a6565b60005b825181101561090057600083828151811061080657634e487b7160e01b600052603260045260246000fd5b60200260200101519050600083838151811061083257634e487b7160e01b600052603260045260246000fd5b60200260200101519050600060026000846001600160a01b03166001600160a01b031681526020019081526020016000205490508082146108ea576001600160a01b03831660009081526002602052604090208290556003546108a190839061089b9084610c35565b90610c61565b6003556040516001600160a01b038416907feceb10b266995afd3009502df537b0421b7f635dd268f4b0a74b99a87be65213906108e19084908690611371565b60405180910390a25b50505080806108f8906113fc565b9150506107db565b505050565b600081565b61092260008051602061148483398151915282610494565b61092a610b3e565b6001600160a01b0316816001600160a01b03167f0be6ab9784c7401fafb73f7bc47bc67cc4ef8c47a60ad3cb66d1de0353a0784c60405160405180910390a350565b61098460008051602061146483398151915282610494565b61098c610b3e565b6001600160a01b0316816001600160a01b03167f2d45ee102874989882745a26688d0b4fffee125a18df26536b12582c7fde4e1760405160405180910390a350565b600061042e81836106eb565b600081815260208190526040812061042e90610c90565b60008051602061148483398151915281565b600082815260208190526040902060020154610a2190610326610b3e565b61052f5760405162461bcd60e51b81526004016104ce90611228565b610a48600082610a03565b610a50610b3e565b6001600160a01b0316816001600160a01b03167f21ba1239795d4e22874e3dc55f0a9d7b65bfb23069d32965d7c23be9524ccf9560405160405180910390a350565b60015460ff1615610ab55760405162461bcd60e51b81526004016104ce906110b1565b6001600160a01b038116610adb5760405162461bcd60e51b81526004016104ce906112c4565b610ae66000826104d7565b506001805460ff191681179055565b60008051602061146483398151915281565b6001600160a01b0316600090815260026020526040902054151590565b600061042e600080516020611464833981519152836106eb565b3390565b6000828152602081905260409020610b5a9082610c9b565b156104e157610b67610b3e565b6001600160a01b0316816001600160a01b0316837f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a45050565b6000828152602081905260409020610bc39082610cb0565b156104e157610bd0610b3e565b6001600160a01b0316816001600160a01b0316837ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b60405160405180910390a45050565b60006106e48383610cc5565b60006106e4836001600160a01b038416610d1e565b600082821115610c575760405162461bcd60e51b81526004016104ce906111f1565b6106e482846113e5565b600080610c6e83856113cd565b9050838110156106e45760405162461bcd60e51b81526004016104ce9061116f565b600061042e82610d36565b60006106e4836001600160a01b038416610d3a565b60006106e4836001600160a01b038416610d84565b81546000908210610ce85760405162461bcd60e51b81526004016104ce906110de565b826000018281548110610d0b57634e487b7160e01b600052603260045260246000fd5b9060005260206000200154905092915050565b60009081526001919091016020526040902054151590565b5490565b6000610d468383610d1e565b610d7c5750815460018181018455600084815260208082209093018490558454848252828601909352604090209190915561046d565b50600061046d565b60008181526001830160205260408120548015610e97576000610da86001836113e5565b8554909150600090610dbc906001906113e5565b90506000866000018281548110610de357634e487b7160e01b600052603260045260246000fd5b9060005260206000200154905080876000018481548110610e1457634e487b7160e01b600052603260045260246000fd5b600091825260209091200155610e2b8360016113cd565b60008281526001890160205260409020558654879080610e5b57634e487b7160e01b600052603160045260246000fd5b6001900381819060005260206000200160009055905586600101600087815260200190815260200160002060009055600194505050505061046d565b600091505061046d565b80356001600160a01b038116811461043157600080fd5b600082601f830112610ec8578081fd5b81356020610edd610ed8836113a9565b61137f565b8281528181019085830183850287018401881015610ef9578586fd5b855b85811015610f1757813584529284019290840190600101610efb565b5090979650505050505050565b600060208284031215610f35578081fd5b6106e482610ea1565b60008060408385031215610f50578081fd5b610f5983610ea1565b946020939093013593505050565b60008060408385031215610f79578182fd5b823567ffffffffffffffff80821115610f90578384fd5b818501915085601f830112610fa3578384fd5b81356020610fb3610ed8836113a9565b82815281810190858301838502870184018b1015610fcf578889fd5b8896505b84871015610ff857610fe481610ea1565b835260019690960195918301918301610fd3565b509650508601359250508082111561100e578283fd5b5061101b85828601610eb8565b9150509250929050565b600060208284031215611036578081fd5b5035919050565b6000806040838503121561104f578182fd5b8235915061105f60208401610ea1565b90509250929050565b6000806040838503121561107a578182fd5b50508035926020909101359150565b6001600160a01b0391909116815260200190565b901515815260200190565b90815260200190565b602080825260139082015272105b1c9958591e481a5b9a5d1a585b1a5cd959606a1b604082015260600190565b60208082526022908201527f456e756d657261626c655365743a20696e646578206f7574206f6620626f756e604082015261647360f01b606082015260800190565b6020808252602f908201527f416363657373436f6e74726f6c3a2073656e646572206d75737420626520616e60408201526e0818591b5a5b881d1bc819dc985b9d608a1b606082015260800190565b6020808252601b908201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604082015260600190565b6020808252602b908201527f506f696e744c6973742e736574506f696e74733a20696e636f7272656374206160408201526a0e4e4c2f240d8cadccee8d60ab1b606082015260800190565b6020808252601e908201527f536166654d6174683a207375627472616374696f6e206f766572666c6f770000604082015260600190565b60208082526030908201527f416363657373436f6e74726f6c3a2073656e646572206d75737420626520616e60408201526f2061646d696e20746f207265766f6b6560801b606082015260800190565b6020808252602c908201527f506f696e744c6973742e736574506f696e74733a2053656e646572206d75737460408201526b1031329037b832b930ba37b960a11b606082015260800190565b6020808252600f908201526e125b98dbdc9c9958dd081a5b9c1d5d608a1b604082015260600190565b6020808252602f908201527f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560408201526e103937b632b9903337b91039b2b63360891b606082015260800190565b6020808252818101527f506f696e744c6973742e736574506f696e74733a20656d707479206172726179604082015260600190565b918252602082015260400190565b60405181810167ffffffffffffffff811182821017156113a1576113a161142d565b604052919050565b600067ffffffffffffffff8211156113c3576113c361142d565b5060209081020190565b600082198211156113e0576113e0611417565b500190565b6000828210156113f7576113f7611417565b500390565b600060001982141561141057611410611417565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052604160045260246000fdfe9d49f397ae9ef1a834b569acb967799a367061e305932181a44f5773da873bfd97667070c54ef182b0f5858b034beac1b6f3089aa2d3188bb1e8929f4fa9b9299f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6a264697066735822122072546ccc8cad8da16f05732ccbfa9c8ea73930ae539f6b4234deb78276b1da3b64736f6c63430008000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101da5760003560e01c806391d1485411610104578063ca15c873116100a2578063e6594abd11610071578063e6594abd146103d3578063f5b541a6146103e6578063fa33bcf3146103ee578063fc4e3e0a14610401576101da565b8063ca15c87314610392578063d5391393146103a5578063d547741f146103ad578063dccfe310146103c0576101da565b8063a217fddf116100de578063a217fddf14610351578063adbf377614610359578063b7928b1d1461036c578063c395fcb31461037f576101da565b806391d14854146103185780639478941c1461032b5780639a80c4a11461033e576101da565b806336568abe1161017c5780636595171c1161014b5780636595171c146102ca578063857d2608146102dd5780638a845fc0146102e55780639010d07c146102f8576101da565b806336568abe146102895780633f16431a1461029c57806354f1e126146102af578063567142be146102c2576101da565b8063248a9ca3116101b8578063248a9ca31461022e578063283ba19b1461024e5780632f2ff15d14610263578063358b816614610276576101da565b8063099db017146101df578063113b0ab2146102085780631cd53d551461021b575b600080fd5b6101f26101ed366004610f24565b610414565b6040516101ff919061109d565b60405180910390f35b6101f2610216366004610f24565b610436565b6101f2610229366004610f3e565b610450565b61024161023c366004611025565b610473565b6040516101ff91906110a8565b61026161025c366004610f24565b610488565b005b61026161027136600461103d565b610494565b610241610284366004610f24565b6104e5565b61026161029736600461103d565b6104f7565b6102616102aa366004610f24565b610539565b6102616102bd366004610f24565b61059b565b6102416105fd565b6102616102d8366004610f24565b610603565b610241610658565b6102616102f3366004610f24565b61066a565b61030b610306366004611068565b6106cc565b6040516101ff9190611089565b6101f261032636600461103d565b6106eb565b610261610339366004610f24565b610703565b61026161034c366004610f67565b610765565b610241610905565b610261610367366004610f24565b61090a565b61026161037a366004610f24565b61096c565b6101f261038d366004610f24565b6109ce565b6102416103a0366004611025565b6109da565b6102416109f1565b6102616103bb36600461103d565b610a03565b6102616103ce366004610f24565b610a3d565b6102616103e1366004610f24565b610a92565b610241610af5565b6101f26103fc366004610f24565b610b07565b6101f261040f366004610f24565b610b24565b600061042e600080516020611484833981519152836106eb565b90505b919050565b600061042e600080516020611444833981519152836106eb565b6001600160a01b0382166000908152600260205260409020548111155b92915050565b60009081526020819052604090206002015490565b61049181610a92565b50565b6000828152602081905260409020600201546104b290610326610b3e565b6104d75760405162461bcd60e51b81526004016104ce90611120565b60405180910390fd5b6104e18282610b42565b5050565b60026020526000908152604090205481565b6104ff610b3e565b6001600160a01b0316816001600160a01b03161461052f5760405162461bcd60e51b81526004016104ce906112ed565b6104e18282610bab565b61055160008051602061144483398151915282610494565b610559610b3e565b6001600160a01b0316816001600160a01b03167f1d5f9ec24c6f91be922ea13ceaad919ad6554a41b5c26087f96289a9baf98ad260405160405180910390a350565b6105b360008051602061148483398151915282610a03565b6105bb610b3e565b6001600160a01b0316816001600160a01b03167f56692a161ffec953ddf9def93b958ea8d1ec95e21b80870c66be91a4374dc4e360405160405180910390a350565b60035481565b61060e600082610494565b610616610b3e565b6001600160a01b0316816001600160a01b03167f2570ac42fd8b322dc453ada624dc2ed0e9bdd67f16f201a25bbd30468f2aa18760405160405180910390a350565b60008051602061144483398151915281565b61068260008051602061144483398151915282610a03565b61068a610b3e565b6001600160a01b0316816001600160a01b03167fe5f1aa9e528307345194b88b24a32401c13926e0823060f1049d9b26c0bb62b260405160405180910390a350565b60008281526020819052604081206106e49083610c14565b9392505050565b60008281526020819052604081206106e49083610c20565b61071b60008051602061146483398151915282610a03565b610723610b3e565b6001600160a01b0316816001600160a01b03167f70b25138b6fadeb9992d18b9653564271823e34b3e3257515d12a6d4b15fcddf60405160405180910390a350565b61076e336109ce565b8061077d575061077d33610b24565b6107995760405162461bcd60e51b81526004016104ce90611278565b81516107b75760405162461bcd60e51b81526004016104ce9061133c565b80518251146107d85760405162461bcd60e51b81526004016104ce906111a6565b60005b825181101561090057600083828151811061080657634e487b7160e01b600052603260045260246000fd5b60200260200101519050600083838151811061083257634e487b7160e01b600052603260045260246000fd5b60200260200101519050600060026000846001600160a01b03166001600160a01b031681526020019081526020016000205490508082146108ea576001600160a01b03831660009081526002602052604090208290556003546108a190839061089b9084610c35565b90610c61565b6003556040516001600160a01b038416907feceb10b266995afd3009502df537b0421b7f635dd268f4b0a74b99a87be65213906108e19084908690611371565b60405180910390a25b50505080806108f8906113fc565b9150506107db565b505050565b600081565b61092260008051602061148483398151915282610494565b61092a610b3e565b6001600160a01b0316816001600160a01b03167f0be6ab9784c7401fafb73f7bc47bc67cc4ef8c47a60ad3cb66d1de0353a0784c60405160405180910390a350565b61098460008051602061146483398151915282610494565b61098c610b3e565b6001600160a01b0316816001600160a01b03167f2d45ee102874989882745a26688d0b4fffee125a18df26536b12582c7fde4e1760405160405180910390a350565b600061042e81836106eb565b600081815260208190526040812061042e90610c90565b60008051602061148483398151915281565b600082815260208190526040902060020154610a2190610326610b3e565b61052f5760405162461bcd60e51b81526004016104ce90611228565b610a48600082610a03565b610a50610b3e565b6001600160a01b0316816001600160a01b03167f21ba1239795d4e22874e3dc55f0a9d7b65bfb23069d32965d7c23be9524ccf9560405160405180910390a350565b60015460ff1615610ab55760405162461bcd60e51b81526004016104ce906110b1565b6001600160a01b038116610adb5760405162461bcd60e51b81526004016104ce906112c4565b610ae66000826104d7565b506001805460ff191681179055565b60008051602061146483398151915281565b6001600160a01b0316600090815260026020526040902054151590565b600061042e600080516020611464833981519152836106eb565b3390565b6000828152602081905260409020610b5a9082610c9b565b156104e157610b67610b3e565b6001600160a01b0316816001600160a01b0316837f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a45050565b6000828152602081905260409020610bc39082610cb0565b156104e157610bd0610b3e565b6001600160a01b0316816001600160a01b0316837ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b60405160405180910390a45050565b60006106e48383610cc5565b60006106e4836001600160a01b038416610d1e565b600082821115610c575760405162461bcd60e51b81526004016104ce906111f1565b6106e482846113e5565b600080610c6e83856113cd565b9050838110156106e45760405162461bcd60e51b81526004016104ce9061116f565b600061042e82610d36565b60006106e4836001600160a01b038416610d3a565b60006106e4836001600160a01b038416610d84565b81546000908210610ce85760405162461bcd60e51b81526004016104ce906110de565b826000018281548110610d0b57634e487b7160e01b600052603260045260246000fd5b9060005260206000200154905092915050565b60009081526001919091016020526040902054151590565b5490565b6000610d468383610d1e565b610d7c5750815460018181018455600084815260208082209093018490558454848252828601909352604090209190915561046d565b50600061046d565b60008181526001830160205260408120548015610e97576000610da86001836113e5565b8554909150600090610dbc906001906113e5565b90506000866000018281548110610de357634e487b7160e01b600052603260045260246000fd5b9060005260206000200154905080876000018481548110610e1457634e487b7160e01b600052603260045260246000fd5b600091825260209091200155610e2b8360016113cd565b60008281526001890160205260409020558654879080610e5b57634e487b7160e01b600052603160045260246000fd5b6001900381819060005260206000200160009055905586600101600087815260200190815260200160002060009055600194505050505061046d565b600091505061046d565b80356001600160a01b038116811461043157600080fd5b600082601f830112610ec8578081fd5b81356020610edd610ed8836113a9565b61137f565b8281528181019085830183850287018401881015610ef9578586fd5b855b85811015610f1757813584529284019290840190600101610efb565b5090979650505050505050565b600060208284031215610f35578081fd5b6106e482610ea1565b60008060408385031215610f50578081fd5b610f5983610ea1565b946020939093013593505050565b60008060408385031215610f79578182fd5b823567ffffffffffffffff80821115610f90578384fd5b818501915085601f830112610fa3578384fd5b81356020610fb3610ed8836113a9565b82815281810190858301838502870184018b1015610fcf578889fd5b8896505b84871015610ff857610fe481610ea1565b835260019690960195918301918301610fd3565b509650508601359250508082111561100e578283fd5b5061101b85828601610eb8565b9150509250929050565b600060208284031215611036578081fd5b5035919050565b6000806040838503121561104f578182fd5b8235915061105f60208401610ea1565b90509250929050565b6000806040838503121561107a578182fd5b50508035926020909101359150565b6001600160a01b0391909116815260200190565b901515815260200190565b90815260200190565b602080825260139082015272105b1c9958591e481a5b9a5d1a585b1a5cd959606a1b604082015260600190565b60208082526022908201527f456e756d657261626c655365743a20696e646578206f7574206f6620626f756e604082015261647360f01b606082015260800190565b6020808252602f908201527f416363657373436f6e74726f6c3a2073656e646572206d75737420626520616e60408201526e0818591b5a5b881d1bc819dc985b9d608a1b606082015260800190565b6020808252601b908201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604082015260600190565b6020808252602b908201527f506f696e744c6973742e736574506f696e74733a20696e636f7272656374206160408201526a0e4e4c2f240d8cadccee8d60ab1b606082015260800190565b6020808252601e908201527f536166654d6174683a207375627472616374696f6e206f766572666c6f770000604082015260600190565b60208082526030908201527f416363657373436f6e74726f6c3a2073656e646572206d75737420626520616e60408201526f2061646d696e20746f207265766f6b6560801b606082015260800190565b6020808252602c908201527f506f696e744c6973742e736574506f696e74733a2053656e646572206d75737460408201526b1031329037b832b930ba37b960a11b606082015260800190565b6020808252600f908201526e125b98dbdc9c9958dd081a5b9c1d5d608a1b604082015260600190565b6020808252602f908201527f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560408201526e103937b632b9903337b91039b2b63360891b606082015260800190565b6020808252818101527f506f696e744c6973742e736574506f696e74733a20656d707479206172726179604082015260600190565b918252602082015260400190565b60405181810167ffffffffffffffff811182821017156113a1576113a161142d565b604052919050565b600067ffffffffffffffff8211156113c3576113c361142d565b5060209081020190565b600082198211156113e0576113e0611417565b500190565b6000828210156113f7576113f7611417565b500390565b600060001982141561141057611410611417565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052604160045260246000fdfe9d49f397ae9ef1a834b569acb967799a367061e305932181a44f5773da873bfd97667070c54ef182b0f5858b034beac1b6f3089aa2d3188bb1e8929f4fa9b9299f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6a264697066735822122072546ccc8cad8da16f05732ccbfa9c8ea73930ae539f6b4234deb78276b1da3b64736f6c63430008000033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addAdminRole(address)": {
+        "details": "The sender must have the admin role.",
+        "params": {
+          "_address": "EOA or contract receiving the new role."
+        }
+      },
+      "addMinterRole(address)": {
+        "details": "The sender must have the admin role",
+        "params": {
+          "_address": "EOA or contract receiving the new role"
+        }
+      },
+      "addOperatorRole(address)": {
+        "details": "The sender must have the admin role",
+        "params": {
+          "_address": "EOA or contract receiving the new role"
+        }
+      },
+      "addSmartContractRole(address)": {
+        "details": "The sender must have the admin role",
+        "params": {
+          "_address": "EOA or contract receiving the new role"
+        }
+      },
+      "getRoleAdmin(bytes32)": {
+        "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+      },
+      "getRoleMember(bytes32,uint256)": {
+        "details": "Returns one of the accounts that have `role`. `index` must be a value between 0 and {getRoleMemberCount}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information."
+      },
+      "getRoleMemberCount(bytes32)": {
+        "details": "Returns the number of accounts that have `role`. Can be used together with {getRoleMember} to enumerate all bearers of a role."
+      },
+      "grantRole(bytes32,address)": {
+        "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role."
+      },
+      "hasAdminRole(address)": {
+        "params": {
+          "_address": "EOA or contract being checked."
+        },
+        "returns": {
+          "_0": "bool True if the account has the role or false if it does not."
+        }
+      },
+      "hasMinterRole(address)": {
+        "params": {
+          "_address": "EOA or contract being checked"
+        },
+        "returns": {
+          "_0": "bool True if the account has the role or false if it does not"
+        }
+      },
+      "hasOperatorRole(address)": {
+        "params": {
+          "_address": "EOA or contract being checked"
+        },
+        "returns": {
+          "_0": "bool True if the account has the role or false if it does not"
+        }
+      },
+      "hasPoints(address,uint256)": {
+        "params": {
+          "_account": "Account address.",
+          "_amount": "Desired amount of points."
+        },
+        "returns": {
+          "_0": "bool True or False."
+        }
+      },
+      "hasRole(bytes32,address)": {
+        "details": "Returns `true` if `account` has been granted `role`."
+      },
+      "hasSmartContractRole(address)": {
+        "params": {
+          "_address": "EOA or contract being checked"
+        },
+        "returns": {
+          "_0": "bool True if the account has the role or false if it does not"
+        }
+      },
+      "initAccessControls(address)": {
+        "params": {
+          "_admin": "Admins address."
+        }
+      },
+      "initPointList(address)": {
+        "params": {
+          "_admin": "Admins address."
+        }
+      },
+      "isInList(address)": {
+        "params": {
+          "_account": "Account address."
+        },
+        "returns": {
+          "_0": "bool True or False."
+        }
+      },
+      "removeAdminRole(address)": {
+        "details": "The sender must have the admin role.",
+        "params": {
+          "_address": "EOA or contract affected."
+        }
+      },
+      "removeMinterRole(address)": {
+        "details": "The sender must have the admin role",
+        "params": {
+          "_address": "EOA or contract affected"
+        }
+      },
+      "removeOperatorRole(address)": {
+        "details": "The sender must have the admin role",
+        "params": {
+          "_address": "EOA or contract affected"
+        }
+      },
+      "removeSmartContractRole(address)": {
+        "details": "The sender must have the admin role",
+        "params": {
+          "_address": "EOA or contract affected"
+        }
+      },
+      "renounceRole(bytes32,address)": {
+        "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`."
+      },
+      "revokeRole(bytes32,address)": {
+        "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role."
+      },
+      "setPoints(address[],uint256[])": {
+        "params": {
+          "_accounts": "An array of accounts.",
+          "_amounts": "An array of corresponding amounts."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "MinterRoleGranted(address,address)": {
+        "notice": "Events for adding and removing various roles"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "MINTER_ROLE()": {
+        "notice": "Role definitions"
+      },
+      "addAdminRole(address)": {
+        "notice": "Grants the admin role to an address."
+      },
+      "addMinterRole(address)": {
+        "notice": "Grants the minter role to an address"
+      },
+      "addOperatorRole(address)": {
+        "notice": "Grants the operator role to an address"
+      },
+      "addSmartContractRole(address)": {
+        "notice": "Grants the smart contract role to an address"
+      },
+      "hasAdminRole(address)": {
+        "notice": "Used to check whether an address has the admin role."
+      },
+      "hasMinterRole(address)": {
+        "notice": "Used to check whether an address has the minter role"
+      },
+      "hasOperatorRole(address)": {
+        "notice": "Used to check whether an address has the operator role"
+      },
+      "hasPoints(address,uint256)": {
+        "notice": "Checks if account has more or equal points as the number given."
+      },
+      "hasSmartContractRole(address)": {
+        "notice": "Used to check whether an address has the smart contract role"
+      },
+      "initAccessControls(address)": {
+        "notice": "Initializes access controls."
+      },
+      "initPointList(address)": {
+        "notice": "Initializes point list with admin address."
+      },
+      "isInList(address)": {
+        "notice": "Checks if account address is in the list (has any points)."
+      },
+      "removeAdminRole(address)": {
+        "notice": "Removes the admin role from an address."
+      },
+      "removeMinterRole(address)": {
+        "notice": "Removes the minter role from an address"
+      },
+      "removeOperatorRole(address)": {
+        "notice": "Removes the operator role from an address"
+      },
+      "removeSmartContractRole(address)": {
+        "notice": "Removes the smart contract role from an address"
+      },
+      "setPoints(address[],uint256[])": {
+        "notice": "Sets points to accounts in one batch."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 12488,
+        "contract": "contracts/Access/PointList.sol:PointList",
+        "label": "_roles",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_bytes32,t_struct(RoleData)12483_storage)"
+      },
+      {
+        "astId": 215,
+        "contract": "contracts/Access/PointList.sol:PointList",
+        "label": "initAccess",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_bool"
+      },
+      {
+        "astId": 684,
+        "contract": "contracts/Access/PointList.sol:PointList",
+        "label": "points",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 686,
+        "contract": "contracts/Access/PointList.sol:PointList",
+        "label": "totalPoints",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_bytes32)dyn_storage": {
+        "base": "t_bytes32",
+        "encoding": "dynamic_array",
+        "label": "bytes32[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_bytes32,t_struct(RoleData)12483_storage)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+        "numberOfBytes": "32",
+        "value": "t_struct(RoleData)12483_storage"
+      },
+      "t_mapping(t_bytes32,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_struct(AddressSet)14934_storage": {
+        "encoding": "inplace",
+        "label": "struct EnumerableSet.AddressSet",
+        "members": [
+          {
+            "astId": 14933,
+            "contract": "contracts/Access/PointList.sol:PointList",
+            "label": "_inner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_struct(Set)14657_storage"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_struct(RoleData)12483_storage": {
+        "encoding": "inplace",
+        "label": "struct AccessControl.RoleData",
+        "members": [
+          {
+            "astId": 12480,
+            "contract": "contracts/Access/PointList.sol:PointList",
+            "label": "members",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_struct(AddressSet)14934_storage"
+          },
+          {
+            "astId": 12482,
+            "contract": "contracts/Access/PointList.sol:PointList",
+            "label": "adminRole",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bytes32"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_struct(Set)14657_storage": {
+        "encoding": "inplace",
+        "label": "struct EnumerableSet.Set",
+        "members": [
+          {
+            "astId": 14652,
+            "contract": "contracts/Access/PointList.sol:PointList",
+            "label": "_values",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_bytes32)dyn_storage"
+          },
+          {
+            "astId": 14656,
+            "contract": "contracts/Access/PointList.sol:PointList",
+            "label": "_indexes",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_bytes32,t_uint256)"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

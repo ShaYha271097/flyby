@@ -1,0 +1,802 @@
+{
+  "address": "0x7d2482f5F80cE8Bda932fF47233E27f19F07a3cC",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newAuction",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "templateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "AuctionTemplateAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "auction",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "templateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "AuctionTemplateRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "FlybyInitMarket",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "marketTemplate",
+          "type": "address"
+        }
+      ],
+      "name": "MarketCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "MARKET_MINTER_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "accessControls",
+      "outputs": [
+        {
+          "internalType": "contract FLYBYAccessControls",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_template",
+          "type": "address"
+        }
+      ],
+      "name": "addAuctionTemplate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "auctionInfo",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "exists",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint64",
+          "name": "templateId",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint128",
+          "name": "index",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "auctionTemplateId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "auctions",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_templateId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenSupply",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "createMarket",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "newMarket",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "currentTemplateId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_templateId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address payable",
+          "name": "_integratorFeeAccount",
+          "type": "address"
+        }
+      ],
+      "name": "deployMarket",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "newMarket",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "flybyDiv",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_templateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAuctionTemplate",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_auction",
+          "type": "address"
+        }
+      ],
+      "name": "getMarketTemplateId",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMarkets",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_auctionTemplate",
+          "type": "address"
+        }
+      ],
+      "name": "getTemplateId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "hasMarketMinterRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_accessControls",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_spaceBox",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_templates",
+          "type": "address[]"
+        }
+      ],
+      "name": "initFLYBYMarket",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "locked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "marketFees",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "minimumFee",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "integratorFeePct",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "minimumFee",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "numberOfAuctions",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_templateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeAuctionTemplate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_templateType",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_templateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCurrentTemplateId",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_divaddr",
+          "type": "address"
+        }
+      ],
+      "name": "setDividends",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "setIntegratorFeePct",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_locked",
+          "type": "bool"
+        }
+      ],
+      "name": "setLocked",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMinimumFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "spaceBox",
+      "outputs": [
+        {
+          "internalType": "contract ISpaceBoxFactory",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x8c1210ac4323c7d08b210034b02d89710a29dbc2eb04dd9f655361cdc287ac49",
+  "receipt": {
+    "to": null,
+    "from": "0x00B91B2F8aFE87FCDc2b3fFA9ee2278cd1E4DDf8",
+    "contractAddress": "0x7d2482f5F80cE8Bda932fF47233E27f19F07a3cC",
+    "transactionIndex": 4,
+    "gasUsed": "2050899",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xc76e8cc8f2681043f9a7008f39cbf10f119a0856cc82bac65f372a2858512747",
+    "transactionHash": "0x8c1210ac4323c7d08b210034b02d89710a29dbc2eb04dd9f655361cdc287ac49",
+    "logs": [],
+    "blockNumber": 14440450,
+    "cumulativeGasUsed": "2509068",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "0bb2481c0a33b756a35d8c75b9e1dee6",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAuction\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"templateId\",\"type\":\"uint256\"}],\"name\":\"AuctionTemplateAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"auction\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"templateId\",\"type\":\"uint256\"}],\"name\":\"AuctionTemplateRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"FlybyInitMarket\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"marketTemplate\",\"type\":\"address\"}],\"name\":\"MarketCreated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"MARKET_MINTER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"accessControls\",\"outputs\":[{\"internalType\":\"contract FLYBYAccessControls\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_template\",\"type\":\"address\"}],\"name\":\"addAuctionTemplate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"auctionInfo\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"exists\",\"type\":\"bool\"},{\"internalType\":\"uint64\",\"name\":\"templateId\",\"type\":\"uint64\"},{\"internalType\":\"uint128\",\"name\":\"index\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"auctionTemplateId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"auctions\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_templateId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenSupply\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"createMarket\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"newMarket\",\"type\":\"address\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"currentTemplateId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_templateId\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_integratorFeeAccount\",\"type\":\"address\"}],\"name\":\"deployMarket\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"newMarket\",\"type\":\"address\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"flybyDiv\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_templateId\",\"type\":\"uint256\"}],\"name\":\"getAuctionTemplate\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_auction\",\"type\":\"address\"}],\"name\":\"getMarketTemplateId\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMarkets\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_auctionTemplate\",\"type\":\"address\"}],\"name\":\"getTemplateId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"hasMarketMinterRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_accessControls\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_spaceBox\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"_templates\",\"type\":\"address[]\"}],\"name\":\"initFLYBYMarket\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"marketFees\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"minimumFee\",\"type\":\"uint128\"},{\"internalType\":\"uint32\",\"name\":\"integratorFeePct\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"minimumFee\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"numberOfAuctions\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_templateId\",\"type\":\"uint256\"}],\"name\":\"removeAuctionTemplate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_templateType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_templateId\",\"type\":\"uint256\"}],\"name\":\"setCurrentTemplateId\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_divaddr\",\"type\":\"address\"}],\"name\":\"setDividends\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"setIntegratorFeePct\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_locked\",\"type\":\"bool\"}],\"name\":\"setLocked\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"setMinimumFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"spaceBox\",\"outputs\":[{\"internalType\":\"contract ISpaceBoxFactory\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/FLYBYMarket.sol\":\"FLYBYMarket\"},\"evmVersion\":\"istanbul\",\"libraries\":{\":__CACHE_BREAKER__\":\"0x00000000d41867734bbee4c6863d9255b2b06ac1\"},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Access/FLYBYAccessControls.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"./FLYBYAdminAccess.sol\\\";\\n\\ncontract FLYBYAccessControls is FLYBYAdminAccess {\\n    /// @notice Role definitions\\n    bytes32 public constant MINTER_ROLE = keccak256(\\\"MINTER_ROLE\\\");\\n    bytes32 public constant SMART_CONTRACT_ROLE = keccak256(\\\"SMART_CONTRACT_ROLE\\\");\\n    bytes32 public constant OPERATOR_ROLE = keccak256(\\\"OPERATOR_ROLE\\\");\\n\\n    /// @notice Events for adding and removing various roles\\n\\n    event MinterRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event MinterRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event OperatorRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event OperatorRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event SmartContractRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event SmartContractRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    /**\\n     * @notice Used to check whether an address has the minter role\\n     * @param _address EOA or contract being checked\\n     * @return bool True if the account has the role or false if it does not\\n     */\\n    function hasMinterRole(address _address) public view returns (bool) {\\n        return hasRole(MINTER_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Used to check whether an address has the smart contract role\\n     * @param _address EOA or contract being checked\\n     * @return bool True if the account has the role or false if it does not\\n     */\\n    function hasSmartContractRole(address _address) public view returns (bool) {\\n        return hasRole(SMART_CONTRACT_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Used to check whether an address has the operator role\\n     * @param _address EOA or contract being checked\\n     * @return bool True if the account has the role or false if it does not\\n     */\\n    function hasOperatorRole(address _address) public view returns (bool) {\\n        return hasRole(OPERATOR_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Grants the minter role to an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract receiving the new role\\n     */\\n    function addMinterRole(address _address) external {\\n        grantRole(MINTER_ROLE, _address);\\n        emit MinterRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the minter role from an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract affected\\n     */\\n    function removeMinterRole(address _address) external {\\n        revokeRole(MINTER_ROLE, _address);\\n        emit MinterRoleRemoved(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Grants the smart contract role to an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract receiving the new role\\n     */\\n    function addSmartContractRole(address _address) external {\\n        grantRole(SMART_CONTRACT_ROLE, _address);\\n        emit SmartContractRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the smart contract role from an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract affected\\n     */\\n    function removeSmartContractRole(address _address) external {\\n        revokeRole(SMART_CONTRACT_ROLE, _address);\\n        emit SmartContractRoleRemoved(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Grants the operator role to an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract receiving the new role\\n     */\\n    function addOperatorRole(address _address) external {\\n        grantRole(OPERATOR_ROLE, _address);\\n        emit OperatorRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the operator role from an address\\n     * @dev The sender must have the admin role\\n     * @param _address EOA or contract affected\\n     */\\n    function removeOperatorRole(address _address) external {\\n        revokeRole(OPERATOR_ROLE, _address);\\n        emit OperatorRoleRemoved(_address, _msgSender());\\n    }\\n}\",\"keccak256\":\"0x15d26912cdf5e68c3bf91040671f5c6f863e32b72906663c4007777abcb5d1e3\",\"license\":\"MIT\"},\"contracts/Access/FLYBYAdminAccess.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../OpenZeppelin/access/AccessControl.sol\\\";\\n\\ncontract FLYBYAdminAccess is AccessControl {\\n    bool private initAccess;\\n    event AdminRoleGranted(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    event AdminRoleRemoved(\\n        address indexed beneficiary,\\n        address indexed caller\\n    );\\n\\n    /**\\n     * @notice Initializes access controls.\\n     * @param _admin Admins address.\\n     */\\n    function initAccessControls(address _admin) public {\\n        require(!initAccess, \\\"Already initialised\\\");\\n        require(_admin != address(0), \\\"Incorrect input\\\");\\n        _setupRole(DEFAULT_ADMIN_ROLE, _admin);\\n        initAccess = true;\\n    }\\n\\n    /**\\n     * @notice Used to check whether an address has the admin role.\\n     * @param _address EOA or contract being checked.\\n     * @return bool True if the account has the role or false if it does not.\\n     */\\n    function hasAdminRole(address _address) public view returns (bool) {\\n        return hasRole(DEFAULT_ADMIN_ROLE, _address);\\n    }\\n\\n    /**\\n     * @notice Grants the admin role to an address.\\n     * @dev The sender must have the admin role.\\n     * @param _address EOA or contract receiving the new role.\\n     */\\n    function addAdminRole(address _address) external {\\n        grantRole(DEFAULT_ADMIN_ROLE, _address);\\n        emit AdminRoleGranted(_address, _msgSender());\\n    }\\n\\n    /**\\n     * @notice Removes the admin role from an address.\\n     * @dev The sender must have the admin role.\\n     * @param _address EOA or contract affected.\\n     */\\n    function removeAdminRole(address _address) external {\\n        revokeRole(DEFAULT_ADMIN_ROLE, _address);\\n        emit AdminRoleRemoved(_address, _msgSender());\\n    }\\n}\",\"keccak256\":\"0x043cc7e6c78cafc685a1348e2af7fb6d49dd66383605b5265383a795f9388f9a\",\"license\":\"MIT\"},\"contracts/FLYBYMarket.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"./Access/FLYBYAccessControls.sol\\\";\\nimport \\\"./Utils/BoringMath.sol\\\";\\nimport \\\"./Utils/SafeTransfer.sol\\\";\\nimport \\\"./Interfaces/IFlybyMarket.sol\\\";\\nimport \\\"./Interfaces/IERC20.sol\\\";\\nimport \\\"./Interfaces/ISpaceBoxFactory.sol\\\";\\n\\ncontract FLYBYMarket is SafeTransfer {\\n\\n    using BoringMath for uint256;\\n    using BoringMath128 for uint256;\\n    using BoringMath64 for uint256;\\n\\n    FLYBYAccessControls public accessControls;\\n    bytes32 public constant MARKET_MINTER_ROLE = keccak256(\\\"MARKET_MINTER_ROLE\\\");\\n\\n    bool private initialised;\\n    struct Auction {\\n        bool exists;\\n        uint64 templateId;\\n        uint128 index;\\n    }\\n\\n    address[] public auctions;\\n\\n    uint256 public auctionTemplateId;\\n\\n    ISpaceBoxFactory public spaceBox;\\n    \\n    mapping(uint256 => address) private auctionTemplates;\\n    mapping(address => uint256) private auctionTemplateToId;\\n    mapping(uint256 => uint256) public currentTemplateId;\\n    mapping(address => Auction) public auctionInfo;\\n\\n    struct MarketFees {\\n        uint128 minimumFee;\\n        uint32 integratorFeePct;\\n    }\\n\\n    MarketFees public marketFees;\\n    bool public locked;\\n    address payable public flybyDiv;\\n    event FlybyInitMarket(address sender);\\n    event AuctionTemplateAdded(address newAuction, uint256 templateId);\\n    event AuctionTemplateRemoved(address auction, uint256 templateId);\\n    event MarketCreated(address indexed owner, address indexed addr, address marketTemplate);\\n    \\n    function initFLYBYMarket(address _accessControls, address _spaceBox, address[] memory _templates) external {\\n        require(!initialised);\\n        require(_accessControls != address(0), \\\"initFLYBYMarket: accessControls cannot be set to zero\\\");\\n        require(_spaceBox != address(0), \\\"initFLYBYMarket: spaceBox cannot be set to zero\\\");\\n\\n        accessControls = FLYBYAccessControls(_accessControls);\\n        spaceBox = ISpaceBoxFactory(_spaceBox);\\n\\n        auctionTemplateId = 0;\\n        for(uint i = 0; i < _templates.length; i++) {\\n            _addAuctionTemplate(_templates[i]);\\n        }\\n        locked = true;\\n        initialised = true;\\n        emit FlybyInitMarket(msg.sender);\\n    }\\n\\n    function setMinimumFee(uint256 _amount) external {\\n        require(\\n            accessControls.hasAdminRole(msg.sender),\\n            \\\"FLYBYMarket: Sender must be operator\\\"\\n        );\\n        marketFees.minimumFee = BoringMath.to128(_amount);\\n    }\\n\\n    function setLocked(bool _locked) external {\\n        require(\\n            accessControls.hasAdminRole(msg.sender),\\n            \\\"FLYBYMarket: Sender must be admin\\\"\\n        );\\n        locked = _locked;\\n    }\\n\\n    function setIntegratorFeePct(uint256 _amount) external {\\n        require(\\n            accessControls.hasAdminRole(msg.sender),\\n            \\\"FLYBYMarket: Sender must be operator\\\"\\n        );\\n        require(_amount <= 1000, \\\"FLYBYMarket: Percentage is out of 1000\\\");\\n        marketFees.integratorFeePct = BoringMath.to32(_amount);\\n    }\\n\\n    function setDividends(address payable _divaddr) external {\\n        require(accessControls.hasAdminRole(msg.sender), \\\"FLYBYMarket.setDev: Sender must be operator\\\");\\n        require(_divaddr != address(0));\\n        flybyDiv = _divaddr;\\n    }\\n\\n    function setCurrentTemplateId(uint256 _templateType, uint256 _templateId) external {\\n        require(\\n            accessControls.hasAdminRole(msg.sender),\\n            \\\"FLYBYMarket: Sender must be admin\\\"\\n        );\\n        require(auctionTemplates[_templateId] != address(0), \\\"FLYBYMarket: incorrect _templateId\\\");\\n        require(IFlybyMarket(auctionTemplates[_templateId]).marketTemplate() == _templateType, \\\"FLYBYMarket: incorrect _templateType\\\");\\n        currentTemplateId[_templateType] = _templateId;\\n    }\\n\\n    function hasMarketMinterRole(address _address) public view returns (bool) {\\n        return accessControls.hasRole(MARKET_MINTER_ROLE, _address);\\n    }\\n\\n    function deployMarket(\\n        uint256 _templateId,\\n        address payable _integratorFeeAccount\\n    )\\n        public payable returns (address newMarket)\\n    {\\n        if (locked) {\\n            require(accessControls.hasAdminRole(msg.sender) \\n                    || accessControls.hasMinterRole(msg.sender)\\n                    || hasMarketMinterRole(msg.sender),\\n                \\\"FLYBYMarket: Sender must be minter if locked\\\"\\n            );\\n        }\\n\\n        MarketFees memory _marketFees = marketFees;\\n        address auctionTemplate = auctionTemplates[_templateId];\\n        require(msg.value >= uint256(_marketFees.minimumFee), \\\"FLYBYMarket: Failed to transfer minimumFee\\\");\\n        require(auctionTemplate != address(0), \\\"FLYBYMarket: Auction template doesn't exist\\\");\\n        uint256 integratorFee = 0;\\n        uint256 flybyFee = msg.value;\\n        if (_integratorFeeAccount != address(0) && _integratorFeeAccount != flybyDiv) {\\n            integratorFee = flybyFee * uint256(_marketFees.integratorFeePct) / 1000;\\n            flybyFee = flybyFee - integratorFee;\\n        }\\n\\n        newMarket = spaceBox.deploy(auctionTemplate, \\\"\\\", false);\\n        auctionInfo[newMarket] = Auction(true, BoringMath.to64(_templateId), BoringMath.to128(auctions.length));\\n        auctions.push(newMarket);\\n        emit MarketCreated(msg.sender, newMarket, auctionTemplate);\\n        if (flybyFee > 0) {\\n            flybyDiv.transfer(flybyFee);\\n        }\\n        if (integratorFee > 0) {\\n            _integratorFeeAccount.transfer(integratorFee);\\n        }\\n    }\\n\\n    function createMarket(\\n        uint256 _templateId,\\n        address _token,\\n        uint256 _tokenSupply,\\n        bytes calldata _data\\n    )\\n        external payable returns (address newMarket)\\n    {\\n        newMarket = deployMarket(_templateId, payable(msg.sender));\\n        if (_tokenSupply > 0) {\\n            _safeTransferFrom(_token, msg.sender, _tokenSupply);\\n            require(IERC20(_token).approve(newMarket, _tokenSupply), \\\"1\\\");\\n        }\\n        IFlybyMarket(newMarket).initMarket(_data);\\n\\n        if (_tokenSupply > 0) {\\n            uint256 remainingBalance = IERC20(_token).balanceOf(address(this));\\n            if (remainingBalance > 0) {\\n                _safeTransfer(_token, msg.sender, remainingBalance);\\n            }\\n        }\\n        return newMarket;\\n    }\\n\\n    function addAuctionTemplate(address _template) external {\\n        require(\\n            accessControls.hasAdminRole(msg.sender) ||\\n            accessControls.hasOperatorRole(msg.sender),\\n            \\\"FLYBYMarket: Sender must be operator\\\"\\n        );\\n        _addAuctionTemplate(_template);    \\n    }\\n\\n    function removeAuctionTemplate(uint256 _templateId) external {\\n        require(\\n            accessControls.hasAdminRole(msg.sender) ||\\n            accessControls.hasOperatorRole(msg.sender),\\n            \\\"FLYBYMarket: Sender must be operator\\\"\\n        );\\n        address template = auctionTemplates[_templateId];\\n        uint256 templateType = IFlybyMarket(template).marketTemplate();\\n        if (currentTemplateId[templateType] == _templateId) {\\n            delete currentTemplateId[templateType];\\n        }   \\n        auctionTemplates[_templateId] = address(0);\\n        delete auctionTemplateToId[template];\\n        emit AuctionTemplateRemoved(template, _templateId);\\n    }\\n\\n    function _addAuctionTemplate(address _template) internal {\\n        require(_template != address(0), \\\"FLYBYMarket: Incorrect template\\\");\\n        require(auctionTemplateToId[_template] == 0, \\\"FLYBYMarket: Template already added\\\");\\n        uint256 templateType = IFlybyMarket(_template).marketTemplate();\\n        require(templateType > 0, \\\"FLYBYMarket: Incorrect template code \\\");\\n        auctionTemplateId++;\\n\\n        auctionTemplates[auctionTemplateId] = _template;\\n        auctionTemplateToId[_template] = auctionTemplateId;\\n        currentTemplateId[templateType] = auctionTemplateId;\\n        emit AuctionTemplateAdded(_template, auctionTemplateId);\\n    }\\n\\n    function getAuctionTemplate(uint256 _templateId) external view returns (address) {\\n        return auctionTemplates[_templateId];\\n    }\\n    function getTemplateId(address _auctionTemplate) external view returns (uint256) {\\n        return auctionTemplateToId[_auctionTemplate];\\n    }\\n    function numberOfAuctions() external view returns (uint) {\\n            return auctions.length;\\n        }\\n    function minimumFee() external view returns(uint128) {\\n        return marketFees.minimumFee;\\n    }\\n\\n    function getMarkets() external view returns(address[] memory) {\\n        return auctions;\\n    }\\n\\n    function getMarketTemplateId(address _auction) external view returns(uint64) {\\n        return auctionInfo[_auction].templateId;\\n    }\\n}\",\"keccak256\":\"0x91efb07ed53863e349bcbaf1e03ee0617d0c361f47d2b027523ebac40e9e9dea\",\"license\":\"MIT\"},\"contracts/Interfaces/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\ninterface IERC20 {\\n    function totalSupply() external view returns (uint256);\\n    function balanceOf(address account) external view returns (uint256);\\n    function allowance(address owner, address spender) external view returns (uint256);\\n    function approve(address spender, uint256 amount) external returns (bool);\\n    function name() external view returns (string memory);\\n    function symbol() external view returns (string memory);\\n    function decimals() external view returns (uint8);\\n\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    function permit(\\n        address owner,\\n        address spender,\\n        uint256 value,\\n        uint256 deadline,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) external;\\n}\",\"keccak256\":\"0xe4f8cb9ac9cd376f81da2348709e1f44dc0bd2fb44513c5d230702bb1b9e8b36\",\"license\":\"MIT\"},\"contracts/Interfaces/IFlybyMarket.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\ninterface IFlybyMarket {\\n\\n    function init(bytes calldata data) external payable;\\n    function initMarket( bytes calldata data ) external;\\n    function marketTemplate() external view returns (uint256);\\n\\n}\",\"keccak256\":\"0xd862ab29398a22d9a62798c45017d14e702eab21756b96f13b20be4e54eb1bdf\",\"license\":\"MIT\"},\"contracts/Interfaces/ISpaceBoxFactory.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\ninterface ISpaceBoxFactory {\\n    function deploy(address masterContract, bytes calldata data, bool useCreate2) external payable returns (address cloneAddress) ;\\n    function masterContractApproved(address, address) external view returns (bool);\\n    function masterContractOf(address) external view returns (address);\\n    function setMasterContractApproval(address user, address masterContract, bool approved, uint8 v, bytes32 r, bytes32 s) external;\\n}\",\"keccak256\":\"0x8d58bda90f470c351bc8999c49947af6ab4ccdb98154f26a975ed679fc354271\",\"license\":\"MIT\"},\"contracts/OpenZeppelin/access/AccessControl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\nimport \\\"../utils/EnumerableSet.sol\\\";\\n\\nabstract contract AccessControl is Context {\\n    using EnumerableSet for EnumerableSet.AddressSet;\\n\\n    struct RoleData {\\n        EnumerableSet.AddressSet members;\\n        bytes32 adminRole;\\n    }\\n\\n    mapping (bytes32 => RoleData) private _roles;\\n\\n    bytes32 public constant DEFAULT_ADMIN_ROLE = 0x00;\\n\\n    /**\\n     * @dev Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole`\\n     *\\n     * `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite\\n     * {RoleAdminChanged} not being emitted signaling this.\\n     *\\n     * _Available since v3.1._\\n     */\\n    event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole);\\n\\n    /**\\n     * @dev Emitted when `account` is granted `role`.\\n     *\\n     * `sender` is the account that originated the contract call, an admin role\\n     * bearer except when using {_setupRole}.\\n     */\\n    event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender);\\n\\n    /**\\n     * @dev Emitted when `account` is revoked `role`.\\n     *\\n     * `sender` is the account that originated the contract call:\\n     *   - if using `revokeRole`, it is the admin role bearer\\n     *   - if using `renounceRole`, it is the role bearer (i.e. `account`)\\n     */\\n    event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender);\\n\\n    /**\\n     * @dev Returns `true` if `account` has been granted `role`.\\n     */\\n    function hasRole(bytes32 role, address account) public view returns (bool) {\\n        return _roles[role].members.contains(account);\\n    }\\n\\n    /**\\n     * @dev Returns the number of accounts that have `role`. Can be used\\n     * together with {getRoleMember} to enumerate all bearers of a role.\\n     */\\n    function getRoleMemberCount(bytes32 role) public view returns (uint256) {\\n        return _roles[role].members.length();\\n    }\\n\\n    /**\\n     * @dev Returns one of the accounts that have `role`. `index` must be a\\n     * value between 0 and {getRoleMemberCount}, non-inclusive.\\n     *\\n     * Role bearers are not sorted in any particular way, and their ordering may\\n     * change at any point.\\n     *\\n     * WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure\\n     * you perform all queries on the same block. See the following\\n     * https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post]\\n     * for more information.\\n     */\\n    function getRoleMember(bytes32 role, uint256 index) public view returns (address) {\\n        return _roles[role].members.at(index);\\n    }\\n\\n    /**\\n     * @dev Returns the admin role that controls `role`. See {grantRole} and\\n     * {revokeRole}.\\n     *\\n     * To change a role's admin, use {_setRoleAdmin}.\\n     */\\n    function getRoleAdmin(bytes32 role) public view returns (bytes32) {\\n        return _roles[role].adminRole;\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function grantRole(bytes32 role, address account) public virtual {\\n        require(hasRole(_roles[role].adminRole, _msgSender()), \\\"AccessControl: sender must be an admin to grant\\\");\\n\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from `account`.\\n     *\\n     * If `account` had been granted `role`, emits a {RoleRevoked} event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function revokeRole(bytes32 role, address account) public virtual {\\n        require(hasRole(_roles[role].adminRole, _msgSender()), \\\"AccessControl: sender must be an admin to revoke\\\");\\n\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from the calling account.\\n     *\\n     * Roles are often managed via {grantRole} and {revokeRole}: this function's\\n     * purpose is to provide a mechanism for accounts to lose their privileges\\n     * if they are compromised (such as when a trusted device is misplaced).\\n     *\\n     * If the calling account had been granted `role`, emits a {RoleRevoked}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must be `account`.\\n     */\\n    function renounceRole(bytes32 role, address account) public virtual {\\n        require(account == _msgSender(), \\\"AccessControl: can only renounce roles for self\\\");\\n\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event. Note that unlike {grantRole}, this function doesn't perform any\\n     * checks on the calling account.\\n     *\\n     * [WARNING]\\n     * ====\\n     * This function should only be called from the constructor when setting\\n     * up the initial roles for the system.\\n     *\\n     * Using this function in any other way is effectively circumventing the admin\\n     * system imposed by {AccessControl}.\\n     * ====\\n     */\\n    function _setupRole(bytes32 role, address account) internal virtual {\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Sets `adminRole` as ``role``'s admin role.\\n     *\\n     * Emits a {RoleAdminChanged} event.\\n     */\\n    function _setRoleAdmin(bytes32 role, bytes32 adminRole) internal virtual {\\n        emit RoleAdminChanged(role, _roles[role].adminRole, adminRole);\\n        _roles[role].adminRole = adminRole;\\n    }\\n\\n    function _grantRole(bytes32 role, address account) private {\\n        if (_roles[role].members.add(account)) {\\n            emit RoleGranted(role, account, _msgSender());\\n        }\\n    }\\n\\n    function _revokeRole(bytes32 role, address account) private {\\n        if (_roles[role].members.remove(account)) {\\n            emit RoleRevoked(role, account, _msgSender());\\n        }\\n    }\\n}\",\"keccak256\":\"0x70a4ac51d4857ce35422d73f70cbec83f00f568e1f95a804dcfbbe509de5a82c\",\"license\":\"MIT\"},\"contracts/OpenZeppelin/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address payable) {\\n        return payable(msg.sender);\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\",\"keccak256\":\"0xe0521887b553a6c5bef0acd727645ff69535b60fe7c5947e40f19391307d70d2\",\"license\":\"MIT\"},\"contracts/OpenZeppelin/utils/EnumerableSet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Library for managing\\n * https://en.wikipedia.org/wiki/Set_(abstract_data_type)[sets] of primitive\\n * types.\\n *\\n * Sets have the following properties:\\n *\\n * - Elements are added, removed, and checked for existence in constant time\\n * (O(1)).\\n * - Elements are enumerated in O(n). No guarantees are made on the ordering.\\n *\\n * ```\\n * contract Example {\\n *     // Add the library methods\\n *     using EnumerableSet for EnumerableSet.AddressSet;\\n *\\n *     // Declare a set state variable\\n *     EnumerableSet.AddressSet private mySet;\\n * }\\n * ```\\n *\\n * As of v3.3.0, sets of type `bytes32` (`Bytes32Set`), `address` (`AddressSet`)\\n * and `uint256` (`UintSet`) are supported.\\n */\\nlibrary EnumerableSet {\\n    // To implement this library for multiple types with as little code\\n    // repetition as possible, we write it in terms of a generic Set type with\\n    // bytes32 values.\\n    // The Set implementation uses private functions, and user-facing\\n    // implementations (such as AddressSet) are just wrappers around the\\n    // underlying Set.\\n    // This means that we can only create new EnumerableSets for types that fit\\n    // in bytes32.\\n\\n    struct Set {\\n        // Storage of set values\\n        bytes32[] _values;\\n\\n        // Position of the value in the `values` array, plus 1 because index 0\\n        // means a value is not in the set.\\n        mapping (bytes32 => uint256) _indexes;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function _add(Set storage set, bytes32 value) private returns (bool) {\\n        if (!_contains(set, value)) {\\n            set._values.push(value);\\n            // The value is stored at length-1, but we add 1 to all indexes\\n            // and use 0 as a sentinel value\\n            set._indexes[value] = set._values.length;\\n            return true;\\n        } else {\\n            return false;\\n        }\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function _remove(Set storage set, bytes32 value) private returns (bool) {\\n        // We read and store the value's index to prevent multiple reads from the same storage slot\\n        uint256 valueIndex = set._indexes[value];\\n\\n        if (valueIndex != 0) { // Equivalent to contains(set, value)\\n            // To delete an element from the _values array in O(1), we swap the element to delete with the last one in\\n            // the array, and then remove the last element (sometimes called as 'swap and pop').\\n            // This modifies the order of the array, as noted in {at}.\\n\\n            uint256 toDeleteIndex = valueIndex - 1;\\n            uint256 lastIndex = set._values.length - 1;\\n\\n            // When the value to delete is the last one, the swap operation is unnecessary. However, since this occurs\\n            // so rarely, we still do the swap anyway to avoid the gas cost of adding an 'if' statement.\\n\\n            bytes32 lastvalue = set._values[lastIndex];\\n\\n            // Move the last value to the index where the value to delete is\\n            set._values[toDeleteIndex] = lastvalue;\\n            // Update the index for the moved value\\n            set._indexes[lastvalue] = toDeleteIndex + 1; // All indexes are 1-based\\n\\n            // Delete the slot where the moved value was stored\\n            set._values.pop();\\n\\n            // Delete the index for the deleted slot\\n            delete set._indexes[value];\\n\\n            return true;\\n        } else {\\n            return false;\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function _contains(Set storage set, bytes32 value) private view returns (bool) {\\n        return set._indexes[value] != 0;\\n    }\\n\\n    /**\\n     * @dev Returns the number of values on the set. O(1).\\n     */\\n    function _length(Set storage set) private view returns (uint256) {\\n        return set._values.length;\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function _at(Set storage set, uint256 index) private view returns (bytes32) {\\n        require(set._values.length > index, \\\"EnumerableSet: index out of bounds\\\");\\n        return set._values[index];\\n    }\\n\\n    // Bytes32Set\\n\\n    struct Bytes32Set {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(Bytes32Set storage set, bytes32 value) internal returns (bool) {\\n        return _add(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(Bytes32Set storage set, bytes32 value) internal returns (bool) {\\n        return _remove(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(Bytes32Set storage set, bytes32 value) internal view returns (bool) {\\n        return _contains(set._inner, value);\\n    }\\n\\n    /**\\n     * @dev Returns the number of values in the set. O(1).\\n     */\\n    function length(Bytes32Set storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function at(Bytes32Set storage set, uint256 index) internal view returns (bytes32) {\\n        return _at(set._inner, index);\\n    }\\n\\n    // AddressSet\\n\\n    struct AddressSet {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(AddressSet storage set, address value) internal returns (bool) {\\n        return _add(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(AddressSet storage set, address value) internal returns (bool) {\\n        return _remove(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(AddressSet storage set, address value) internal view returns (bool) {\\n        return _contains(set._inner, bytes32(uint256(uint160(value))));\\n    }\\n\\n    /**\\n     * @dev Returns the number of values in the set. O(1).\\n     */\\n    function length(AddressSet storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function at(AddressSet storage set, uint256 index) internal view returns (address) {\\n        return address(uint160(uint256(_at(set._inner, index))));\\n    }\\n\\n\\n    // UintSet\\n\\n    struct UintSet {\\n        Set _inner;\\n    }\\n\\n    /**\\n     * @dev Add a value to a set. O(1).\\n     *\\n     * Returns true if the value was added to the set, that is if it was not\\n     * already present.\\n     */\\n    function add(UintSet storage set, uint256 value) internal returns (bool) {\\n        return _add(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Removes a value from a set. O(1).\\n     *\\n     * Returns true if the value was removed from the set, that is if it was\\n     * present.\\n     */\\n    function remove(UintSet storage set, uint256 value) internal returns (bool) {\\n        return _remove(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Returns true if the value is in the set. O(1).\\n     */\\n    function contains(UintSet storage set, uint256 value) internal view returns (bool) {\\n        return _contains(set._inner, bytes32(value));\\n    }\\n\\n    /**\\n     * @dev Returns the number of values on the set. O(1).\\n     */\\n    function length(UintSet storage set) internal view returns (uint256) {\\n        return _length(set._inner);\\n    }\\n\\n   /**\\n    * @dev Returns the value stored at position `index` in the set. O(1).\\n    *\\n    * Note that there are no guarantees on the ordering of values inside the\\n    * array, and it may change when more values are added or removed.\\n    *\\n    * Requirements:\\n    *\\n    * - `index` must be strictly less than {length}.\\n    */\\n    function at(UintSet storage set, uint256 index) internal view returns (uint256) {\\n        return uint256(_at(set._inner, index));\\n    }\\n}\",\"keccak256\":\"0x01c748c0e9f9c425f95c8f0e7eb6625675a4fde41b7f5444bcf6b894b375e72c\",\"license\":\"MIT\"},\"contracts/Utils/BoringMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nlibrary BoringMath {\\n    function add(uint256 a, uint256 b) internal pure returns (uint256 c) {\\n        require((c = a + b) >= b, \\\"BoringMath: Add Overflow\\\");\\n    }\\n\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256 c) {\\n        require((c = a - b) <= a, \\\"BoringMath: Underflow\\\");\\n    }\\n\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {\\n        require(b == 0 || (c = a * b) / b == a, \\\"BoringMath: Mul Overflow\\\");\\n    }\\n\\n    function div(uint256 a, uint256 b) internal pure returns (uint256 c) {\\n        require(b > 0, \\\"BoringMath: Div zero\\\");\\n        c = a / b;\\n    }\\n\\n    function to128(uint256 a) internal pure returns (uint128 c) {\\n        require(a <= uint128(type(uint128).max), \\\"BoringMath: uint128 Overflow\\\");\\n        c = uint128(a);\\n    }\\n\\n    function to64(uint256 a) internal pure returns (uint64 c) {\\n        require(a <= uint64(type(uint64).max), \\\"BoringMath: uint64 Overflow\\\");\\n        c = uint64(a);\\n    }\\n\\n    function to32(uint256 a) internal pure returns (uint32 c) {\\n        require(a <= uint32(type(uint32).max), \\\"BoringMath: uint32 Overflow\\\");\\n        c = uint32(a);\\n    }\\n\\n    function to16(uint256 a) internal pure returns (uint16 c) {\\n        require(a <= uint16(type(uint16).max), \\\"BoringMath: uint16 Overflow\\\");\\n        c = uint16(a);\\n    }\\n\\n}\\n\\n/// @notice A library for performing overflow-/underflow-safe addition and subtraction on uint128.\\nlibrary BoringMath128 {\\n    function add(uint128 a, uint128 b) internal pure returns (uint128 c) {\\n        require((c = a + b) >= b, \\\"BoringMath: Add Overflow\\\");\\n    }\\n\\n    function sub(uint128 a, uint128 b) internal pure returns (uint128 c) {\\n        require((c = a - b) <= a, \\\"BoringMath: Underflow\\\");\\n    }\\n}\\n\\n/// @notice A library for performing overflow-/underflow-safe addition and subtraction on uint64.\\nlibrary BoringMath64 {\\n    function add(uint64 a, uint64 b) internal pure returns (uint64 c) {\\n        require((c = a + b) >= b, \\\"BoringMath: Add Overflow\\\");\\n    }\\n\\n    function sub(uint64 a, uint64 b) internal pure returns (uint64 c) {\\n        require((c = a - b) <= a, \\\"BoringMath: Underflow\\\");\\n    }\\n}\\n\\n/// @notice A library for performing overflow-/underflow-safe addition and subtraction on uint32.\\nlibrary BoringMath32 {\\n    function add(uint32 a, uint32 b) internal pure returns (uint32 c) {\\n        require((c = a + b) >= b, \\\"BoringMath: Add Overflow\\\");\\n    }\\n\\n    function sub(uint32 a, uint32 b) internal pure returns (uint32 c) {\\n        require((c = a - b) <= a, \\\"BoringMath: Underflow\\\");\\n    }\\n}\\n\\n/// @notice A library for performing overflow-/underflow-safe addition and subtraction on uint32.\\nlibrary BoringMath16 {\\n    function add(uint16 a, uint16 b) internal pure returns (uint16 c) {\\n        require((c = a + b) >= b, \\\"BoringMath: Add Overflow\\\");\\n    }\\n\\n    function sub(uint16 a, uint16 b) internal pure returns (uint16 c) {\\n        require((c = a - b) <= a, \\\"BoringMath: Underflow\\\");\\n    }\\n}\",\"keccak256\":\"0x89df8679004bb5921d308b1339717c59cdb689cedbb673cdb2510fceece81b87\",\"license\":\"MIT\"},\"contracts/Utils/SafeTransfer.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\ncontract SafeTransfer {\\n\\n    address private constant ETH_ADDRESS = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;\\n\\n    function _safeTokenPayment(\\n        address _token,\\n        address payable _to,\\n        uint256 _amount\\n    ) internal {\\n        if (address(_token) == ETH_ADDRESS) {\\n            _safeTransferETH(_to,_amount );\\n        } else {\\n            _safeTransfer(_token, _to, _amount);\\n        }\\n    }\\n    \\n    function _tokenPayment(\\n        address _token,\\n        address payable _to,\\n        uint256 _amount\\n    ) internal {\\n        if (address(_token) == ETH_ADDRESS) {\\n            _to.transfer(_amount);\\n        } else {\\n            _safeTransfer(_token, _to, _amount);\\n        }\\n    }\\n    \\n    function _safeApprove(address token, address to, uint value) internal {\\n        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0x095ea7b3, to, value));\\n        require(success && (data.length == 0 || abi.decode(data, (bool))), \\\"TransferHelper: APPROVE_FAILED\\\");\\n    }\\n    \\n    function _safeTransfer(\\n        address token,\\n        address to,\\n        uint256 amount\\n    ) internal virtual {\\n        (bool success, bytes memory data) =\\n            token.call(\\n                abi.encodeWithSelector(0xa9059cbb, to, amount)\\n            );\\n        require(success && (data.length == 0 || abi.decode(data, (bool))));\\n    }\\n\\n    function _safeTransferFrom(\\n        address token,\\n        address from,\\n        uint256 amount\\n    ) internal virtual {\\n        (bool success, bytes memory data) =\\n            token.call(\\n                abi.encodeWithSelector(0x23b872dd, from, address(this), amount)\\n            );\\n        require(success && (data.length == 0 || abi.decode(data, (bool))));\\n    }\\n\\n    function _safeTransferFrom(address token, address from, address to, uint value) internal {\\n        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0x23b872dd, from, to, value));\\n        require(success && (data.length == 0 || abi.decode(data, (bool))), \\\"TransferHelper: TRANSFER_FROM_FAILED\\\");\\n    }\\n\\n    function _safeTransferETH(address to, uint value) internal {\\n        (bool success,) = to.call{value:value}(new bytes(0));\\n        require(success, \\\"TransferHelper: ETH_TRANSFER_FAILED\\\");\\n    }\\n\\n}\",\"keccak256\":\"0xe07868766e4bb0ca00fcb4b73c692b0aa2ec5d77991042f9defa64e7b30b3b41\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50612423806100206000396000f3fe60806040526004361061019c5760003560e01c80636c2eefe1116100ec578063b03434931161008a578063cf30901211610064578063cf30901214610478578063d335ebda1461048d578063ec2c9016146104ad578063ef8e1dd2146104cf5761019c565b8063b034349314610416578063b3053c9b14610443578063b9551d14146104585761019c565b80639e5940cc116100c65780639e5940cc146103935780639e9188ea146103b35780639edbd90a146103d3578063a5fd7565146103f65761019c565b80636c2eefe1146103545780636eb4a74214610369578063748365ef1461037e5761019c565b80632ed4f578116101595780634b939ed7116101335780634b939ed7146102ea5780634f5f2a451461030a57806350d9d4721461031f578063571a26a0146103345761019c565b80632ed4f57814610270578063390467b61461029d5780633f1f44b0146102ca5761019c565b80630448e51a146101a1578063182a7506146101d95780631a7626e7146101fb5780631dc325a51461021d578063211e28b61461023d57806328e58e4f1461025d575b600080fd5b3480156101ad57600080fd5b506101c16101bc366004611a4f565b6104ef565b6040516101d093929190611dcb565b60405180910390f35b3480156101e557600080fd5b506101f96101f4366004611bae565b610526565b005b34801561020757600080fd5b50610210610600565b6040516101d091906122e5565b61023061022b366004611c0d565b61060f565b6040516101d09190611cf8565b34801561024957600080fd5b506101f9610258366004611b76565b6107d0565b61023061026b366004611bde565b61087f565b34801561027c57600080fd5b5061029061028b366004611bae565b610d10565b6040516101d09190611df6565b3480156102a957600080fd5b506102bd6102b8366004611a4f565b610d22565b6040516101d09190611dc0565b3480156102d657600080fd5b506101f96102e5366004611bae565b610dcd565b3480156102f657600080fd5b50610230610305366004611bae565b610ebc565b34801561031657600080fd5b50610290610ed7565b34801561032b57600080fd5b50610290610efb565b34801561034057600080fd5b5061023061034f366004611bae565b610f01565b34801561036057600080fd5b50610290610f2b565b34801561037557600080fd5b50610230610f31565b34801561038a57600080fd5b50610230610f45565b34801561039f57600080fd5b506101f96103ae366004611c9e565b610f54565b3480156103bf57600080fd5b506101f96103ce366004611a4f565b6110dc565b3480156103df57600080fd5b506103e86111b3565b6040516101d09291906122f9565b34801561040257600080fd5b506101f9610411366004611a4f565b6111d1565b34801561042257600080fd5b50610436610431366004611a4f565b6112ff565b6040516101d09190612318565b34801561044f57600080fd5b50610230611329565b34801561046457600080fd5b506101f9610473366004611bae565b611338565b34801561048457600080fd5b506102bd61157f565b34801561049957600080fd5b506102906104a8366004611a4f565b611588565b3480156104b957600080fd5b506104c26115a3565b6040516101d09190611d73565b3480156104db57600080fd5b506101f96104ea366004611a8e565b611605565b60076020526000908152604090205460ff811690610100810467ffffffffffffffff1690600160481b90046001600160801b031683565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610556903390600401611cf8565b60206040518083038186803b15801561056e57600080fd5b505afa158015610582573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105a69190611b92565b6105cb5760405162461bcd60e51b81526004016105c290611e45565b60405180910390fd5b6105d481611736565b600880546fffffffffffffffffffffffffffffffff19166001600160801b039290921691909117905550565b6008546001600160801b031690565b600061061b863361087f565b905083156106ca5761062e853386611763565b60405163095ea7b360e01b81526001600160a01b0386169063095ea7b39061065c9084908890600401611d5a565b602060405180830381600087803b15801561067657600080fd5b505af115801561068a573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106ae9190611b92565b6106ca5760405162461bcd60e51b81526004016105c290612185565b60405163409a9e4760e11b81526001600160a01b038216906381353c8e906106f89086908690600401611e16565b600060405180830381600087803b15801561071257600080fd5b505af1158015610726573d6000803e3d6000fd5b5050505060008411156107c7576040516370a0823160e01b81526000906001600160a01b038716906370a0823190610762903090600401611cf8565b60206040518083038186803b15801561077a57600080fd5b505afa15801561078e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107b29190611bc6565b905080156107c5576107c586338361183f565b505b95945050505050565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610800903390600401611cf8565b60206040518083038186803b15801561081857600080fd5b505afa15801561082c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108509190611b92565b61086c5760405162461bcd60e51b81526004016105c29061225f565b6009805460ff1916911515919091179055565b60095460009060ff16156109be5760005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb3906108bd903390600401611cf8565b60206040518083038186803b1580156108d557600080fd5b505afa1580156108e9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061090d9190611b92565b80610993575060005460405163099db01760e01b81526001600160a01b039091169063099db01790610943903390600401611cf8565b60206040518083038186803b15801561095b57600080fd5b505afa15801561096f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109939190611b92565b806109a257506109a233610d22565b6109be5760405162461bcd60e51b81526004016105c290611e89565b6040805180820182526008546001600160801b038082168352600160801b90910463ffffffff16602080840191909152600087815260049091529290922054815191926001600160a01b039091169116341015610a2d5760405162461bcd60e51b81526004016105c29061201f565b6001600160a01b038116610a535760405162461bcd60e51b81526004016105c290612069565b6000346001600160a01b03861615801590610a8157506009546001600160a01b038781166101009092041614155b15610ab8576103e8846020015163ffffffff1682610a9f919061234d565b610aa9919061232d565b9150610ab5828261236c565b90505b600354604051631f54245b60e01b81526001600160a01b0390911690631f54245b90610aeb908690600090600401611d30565b602060405180830381600087803b158015610b0557600080fd5b505af1158015610b19573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b3d9190611a72565b94506040518060600160405280600115158152602001610b5c89611864565b67ffffffffffffffff168152602001610b79600180549050611736565b6001600160801b039081169091526001600160a01b038716600081815260076020908152604080832086518154938801519783015160ff199094169015151768ffffffffffffffff00191661010067ffffffffffffffff909816979097029690961778ffffffffffffffffffffffffffffffff0000000000000000001916600160481b92909516919091029390931790935560018054808201825593527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf690920180546001600160a01b031916831790555133907fe63e6130091e2155004c4b5ac35e8fb9be704d6637ff3068a8f710ba36c9f41a90610c7a908790611cf8565b60405180910390a38015610cc8576009546040516101009091046001600160a01b0316906108fc8315029083906000818181858888f19350505050158015610cc6573d6000803e3d6000fd5b505b8115610d06576040516001600160a01b0387169083156108fc029084906000818181858888f19350505050158015610d04573d6000803e3d6000fd5b505b5050505092915050565b60066020526000908152604090205481565b60008054604051632474521560e21b81526001600160a01b03909116906391d1485490610d75907f185f85149db0f205130703941d0f9ccd8133e50df5d5080231c7704337aa2c38908690600401611dff565b60206040518083038186803b158015610d8d57600080fd5b505afa158015610da1573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610dc59190611b92565b90505b919050565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610dfd903390600401611cf8565b60206040518083038186803b158015610e1557600080fd5b505afa158015610e29573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e4d9190611b92565b610e695760405162461bcd60e51b81526004016105c290611e45565b6103e8811115610e8b5760405162461bcd60e51b81526004016105c2906121e2565b610e948161188e565b6008805463ffffffff92909216600160801b0263ffffffff60801b1990921691909117905550565b6000908152600460205260409020546001600160a01b031690565b7f185f85149db0f205130703941d0f9ccd8133e50df5d5080231c7704337aa2c3881565b60015490565b60018181548110610f1157600080fd5b6000918252602090912001546001600160a01b0316905081565b60025481565b60095461010090046001600160a01b031681565b6000546001600160a01b031681565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610f84903390600401611cf8565b60206040518083038186803b158015610f9c57600080fd5b505afa158015610fb0573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610fd49190611b92565b610ff05760405162461bcd60e51b81526004016105c29061225f565b6000818152600460205260409020546001600160a01b03166110245760405162461bcd60e51b81526004016105c2906121a0565b600081815260046020818152604092839020548351630d9f230760e11b8152935186946001600160a01b0390921693631b3e460e938382019390929190829003018186803b15801561107557600080fd5b505afa158015611089573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906110ad9190611bc6565b146110ca5760405162461bcd60e51b81526004016105c290611fdb565b60009182526006602052604090912055565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb39061110c903390600401611cf8565b60206040518083038186803b15801561112457600080fd5b505afa158015611138573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061115c9190611b92565b6111785760405162461bcd60e51b81526004016105c29061213a565b6001600160a01b03811661118b57600080fd5b600980546001600160a01b0390921661010002610100600160a81b0319909216919091179055565b6008546001600160801b03811690600160801b900463ffffffff1682565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390611201903390600401611cf8565b60206040518083038186803b15801561121957600080fd5b505afa15801561122d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906112519190611b92565b806112d75750600054604051637e271f0560e11b81526001600160a01b039091169063fc4e3e0a90611287903390600401611cf8565b60206040518083038186803b15801561129f57600080fd5b505afa1580156112b3573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906112d79190611b92565b6112f35760405162461bcd60e51b81526004016105c290611e45565b6112fc816118b4565b50565b6001600160a01b0316600090815260076020526040902054610100900467ffffffffffffffff1690565b6003546001600160a01b031681565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390611368903390600401611cf8565b60206040518083038186803b15801561138057600080fd5b505afa158015611394573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906113b89190611b92565b8061143e5750600054604051637e271f0560e11b81526001600160a01b039091169063fc4e3e0a906113ee903390600401611cf8565b60206040518083038186803b15801561140657600080fd5b505afa15801561141a573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061143e9190611b92565b61145a5760405162461bcd60e51b81526004016105c290611e45565b6000818152600460208181526040808420548151630d9f230760e11b815291516001600160a01b0390911694938593631b3e460e9380830193919290829003018186803b1580156114aa57600080fd5b505afa1580156114be573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906114e29190611bc6565b60008181526006602052604090205490915083141561150b576000818152600660205260408120555b600083815260046020908152604080832080546001600160a01b03191690556001600160a01b0385168352600590915280822091909155517f9e451d330e5bb7320c38b55046b66305a869486110a27e84e383b9b2a329875b906115729084908690611d5a565b60405180910390a1505050565b60095460ff1681565b6001600160a01b031660009081526005602052604090205490565b606060018054806020026020016040519081016040528092919081815260200182805480156115fb57602002820191906000526020600020905b81546001600160a01b031681526001909101906020018083116115dd575b5050505050905090565b600054600160a01b900460ff161561161c57600080fd5b6001600160a01b0383166116425760405162461bcd60e51b81526004016105c290611f4f565b6001600160a01b0382166116685760405162461bcd60e51b81526004016105c2906120eb565b600080546001600160a01b038086166001600160a01b0319928316178355600380549186169190921617905560028190555b81518110156116e5576116d38282815181106116c657634e487b7160e01b600052603260045260246000fd5b60200260200101516118b4565b806116dd81612383565b91505061169a565b506009805460ff191660011790556000805460ff60a01b1916600160a01b1790556040517f4b2ecdf8f830bb7e9a67fd6deffd1ce51740390bec9042b1baa6b539a9cdb53190611572903390611cf8565b60006001600160801b0382111561175f5760405162461bcd60e51b81526004016105c290611fa4565b5090565b600080846001600160a01b03166323b872dd85308660405160240161178a93929190611d0c565b6040516020818303038152906040529060e01b6020820180516001600160e01b0383818316178352505050506040516117c39190611cbf565b6000604051808303816000865af19150503d8060008114611800576040519150601f19603f3d011682016040523d82523d6000602084013e611805565b606091505b509150915081801561182f57508051158061182f57508080602001905181019061182f9190611b92565b61183857600080fd5b5050505050565b600080846001600160a01b031663a9059cbb858560405160240161178a929190611d5a565b600067ffffffffffffffff82111561175f5760405162461bcd60e51b81526004016105c2906120b4565b600063ffffffff82111561175f5760405162461bcd60e51b81526004016105c290612228565b6001600160a01b0381166118da5760405162461bcd60e51b81526004016105c290611ed5565b6001600160a01b038116600090815260056020526040902054156119105760405162461bcd60e51b81526004016105c290611f0c565b6000816001600160a01b0316631b3e460e6040518163ffffffff1660e01b815260040160206040518083038186803b15801561194b57600080fd5b505afa15801561195f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906119839190611bc6565b9050600081116119a55760405162461bcd60e51b81526004016105c2906122a0565b600280549060006119b583612383565b909155505060028054600090815260046020908152604080832080546001600160a01b0319166001600160a01b038816908117909155935493835260058252808320849055848352600690915290819020829055517f893e8595c407d2a22d29ff3ba939d15ec3966113ce988bd39c68e4b00350400791611a3891859190611d5a565b60405180910390a15050565b8035610dc8816123ca565b600060208284031215611a60578081fd5b8135611a6b816123ca565b9392505050565b600060208284031215611a83578081fd5b8151611a6b816123ca565b600080600060608486031215611aa2578182fd5b8335611aad816123ca565b9250602084810135611abe816123ca565b9250604085013567ffffffffffffffff80821115611ada578384fd5b818701915087601f830112611aed578384fd5b813581811115611aff57611aff6123b4565b83810260405185828201018181108582111715611b1e57611b1e6123b4565b604052828152858101935084860182860187018c1015611b3c578788fd5b8795505b83861015611b6557611b5181611a44565b855260019590950194938601938601611b40565b508096505050505050509250925092565b600060208284031215611b87578081fd5b8135611a6b816123df565b600060208284031215611ba3578081fd5b8151611a6b816123df565b600060208284031215611bbf578081fd5b5035919050565b600060208284031215611bd7578081fd5b5051919050565b60008060408385031215611bf0578182fd5b823591506020830135611c02816123ca565b809150509250929050565b600080600080600060808688031215611c24578081fd5b853594506020860135611c36816123ca565b935060408601359250606086013567ffffffffffffffff80821115611c59578283fd5b818801915088601f830112611c6c578283fd5b813581811115611c7a578384fd5b896020828501011115611c8b578384fd5b9699959850939650602001949392505050565b60008060408385031215611cb0578182fd5b50508035926020909101359150565b60008251815b81811015611cdf5760208186018101518583015201611cc5565b81811115611ced5782828501525b509190910192915050565b6001600160a01b0391909116815260200190565b6001600160a01b039384168152919092166020820152604081019190915260600190565b6001600160a01b039290921682526060602083018190526000908301521515604082015260800190565b6001600160a01b03929092168252602082015260400190565b6020808252825182820181905260009190848201906040850190845b81811015611db45783516001600160a01b031683529284019291840191600101611d8f565b50909695505050505050565b901515815260200190565b921515835267ffffffffffffffff9190911660208301526001600160801b0316604082015260600190565b90815260200190565b9182526001600160a01b0316602082015260400190565b60006020825282602083015282846040840137818301604090810191909152601f909201601f19160101919050565b60208082526024908201527f464c5942594d61726b65743a2053656e646572206d757374206265206f70657260408201526330ba37b960e11b606082015260800190565b6020808252602c908201527f464c5942594d61726b65743a2053656e646572206d757374206265206d696e7460408201526b195c881a59881b1bd8dad95960a21b606082015260800190565b6020808252601f908201527f464c5942594d61726b65743a20496e636f72726563742074656d706c61746500604082015260600190565b60208082526023908201527f464c5942594d61726b65743a2054656d706c61746520616c726561647920616460408201526219195960ea1b606082015260800190565b60208082526035908201527f696e6974464c5942594d61726b65743a20616363657373436f6e74726f6c732060408201527463616e6e6f742062652073657420746f207a65726f60581b606082015260800190565b6020808252601c908201527f426f72696e674d6174683a2075696e74313238204f766572666c6f7700000000604082015260600190565b60208082526024908201527f464c5942594d61726b65743a20696e636f7272656374205f74656d706c6174656040820152635479706560e01b606082015260800190565b6020808252602a908201527f464c5942594d61726b65743a204661696c656420746f207472616e73666572206040820152696d696e696d756d46656560b01b606082015260800190565b6020808252602b908201527f464c5942594d61726b65743a2041756374696f6e2074656d706c61746520646f60408201526a195cdb89dd08195e1a5cdd60aa1b606082015260800190565b6020808252601b908201527f426f72696e674d6174683a2075696e743634204f766572666c6f770000000000604082015260600190565b6020808252602f908201527f696e6974464c5942594d61726b65743a207370616365426f782063616e6e6f7460408201526e2062652073657420746f207a65726f60881b606082015260800190565b6020808252602b908201527f464c5942594d61726b65742e7365744465763a2053656e646572206d7573742060408201526a31329037b832b930ba37b960a91b606082015260800190565b6020808252600190820152603160f81b604082015260600190565b60208082526022908201527f464c5942594d61726b65743a20696e636f7272656374205f74656d706c617465604082015261125960f21b606082015260800190565b60208082526026908201527f464c5942594d61726b65743a2050657263656e74616765206973206f7574206f60408201526506620313030360d41b606082015260800190565b6020808252601b908201527f426f72696e674d6174683a2075696e743332204f766572666c6f770000000000604082015260600190565b60208082526021908201527f464c5942594d61726b65743a2053656e646572206d7573742062652061646d696040820152603760f91b606082015260800190565b60208082526025908201527f464c5942594d61726b65743a20496e636f72726563742074656d706c61746520604082015264031b7b232960dd1b606082015260800190565b6001600160801b0391909116815260200190565b6001600160801b0392909216825263ffffffff16602082015260400190565b67ffffffffffffffff91909116815260200190565b60008261234857634e487b7160e01b81526012600452602481fd5b500490565b60008160001904831182151516156123675761236761239e565b500290565b60008282101561237e5761237e61239e565b500390565b60006000198214156123975761239761239e565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052604160045260246000fd5b6001600160a01b03811681146112fc57600080fd5b80151581146112fc57600080fdfea2646970667358221220eb245696830b6fdb98fda5ced96a0a7f538e4dee529f5541c59302677599c80b64736f6c63430008000033",
+  "deployedBytecode": "0x60806040526004361061019c5760003560e01c80636c2eefe1116100ec578063b03434931161008a578063cf30901211610064578063cf30901214610478578063d335ebda1461048d578063ec2c9016146104ad578063ef8e1dd2146104cf5761019c565b8063b034349314610416578063b3053c9b14610443578063b9551d14146104585761019c565b80639e5940cc116100c65780639e5940cc146103935780639e9188ea146103b35780639edbd90a146103d3578063a5fd7565146103f65761019c565b80636c2eefe1146103545780636eb4a74214610369578063748365ef1461037e5761019c565b80632ed4f578116101595780634b939ed7116101335780634b939ed7146102ea5780634f5f2a451461030a57806350d9d4721461031f578063571a26a0146103345761019c565b80632ed4f57814610270578063390467b61461029d5780633f1f44b0146102ca5761019c565b80630448e51a146101a1578063182a7506146101d95780631a7626e7146101fb5780631dc325a51461021d578063211e28b61461023d57806328e58e4f1461025d575b600080fd5b3480156101ad57600080fd5b506101c16101bc366004611a4f565b6104ef565b6040516101d093929190611dcb565b60405180910390f35b3480156101e557600080fd5b506101f96101f4366004611bae565b610526565b005b34801561020757600080fd5b50610210610600565b6040516101d091906122e5565b61023061022b366004611c0d565b61060f565b6040516101d09190611cf8565b34801561024957600080fd5b506101f9610258366004611b76565b6107d0565b61023061026b366004611bde565b61087f565b34801561027c57600080fd5b5061029061028b366004611bae565b610d10565b6040516101d09190611df6565b3480156102a957600080fd5b506102bd6102b8366004611a4f565b610d22565b6040516101d09190611dc0565b3480156102d657600080fd5b506101f96102e5366004611bae565b610dcd565b3480156102f657600080fd5b50610230610305366004611bae565b610ebc565b34801561031657600080fd5b50610290610ed7565b34801561032b57600080fd5b50610290610efb565b34801561034057600080fd5b5061023061034f366004611bae565b610f01565b34801561036057600080fd5b50610290610f2b565b34801561037557600080fd5b50610230610f31565b34801561038a57600080fd5b50610230610f45565b34801561039f57600080fd5b506101f96103ae366004611c9e565b610f54565b3480156103bf57600080fd5b506101f96103ce366004611a4f565b6110dc565b3480156103df57600080fd5b506103e86111b3565b6040516101d09291906122f9565b34801561040257600080fd5b506101f9610411366004611a4f565b6111d1565b34801561042257600080fd5b50610436610431366004611a4f565b6112ff565b6040516101d09190612318565b34801561044f57600080fd5b50610230611329565b34801561046457600080fd5b506101f9610473366004611bae565b611338565b34801561048457600080fd5b506102bd61157f565b34801561049957600080fd5b506102906104a8366004611a4f565b611588565b3480156104b957600080fd5b506104c26115a3565b6040516101d09190611d73565b3480156104db57600080fd5b506101f96104ea366004611a8e565b611605565b60076020526000908152604090205460ff811690610100810467ffffffffffffffff1690600160481b90046001600160801b031683565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610556903390600401611cf8565b60206040518083038186803b15801561056e57600080fd5b505afa158015610582573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105a69190611b92565b6105cb5760405162461bcd60e51b81526004016105c290611e45565b60405180910390fd5b6105d481611736565b600880546fffffffffffffffffffffffffffffffff19166001600160801b039290921691909117905550565b6008546001600160801b031690565b600061061b863361087f565b905083156106ca5761062e853386611763565b60405163095ea7b360e01b81526001600160a01b0386169063095ea7b39061065c9084908890600401611d5a565b602060405180830381600087803b15801561067657600080fd5b505af115801561068a573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106ae9190611b92565b6106ca5760405162461bcd60e51b81526004016105c290612185565b60405163409a9e4760e11b81526001600160a01b038216906381353c8e906106f89086908690600401611e16565b600060405180830381600087803b15801561071257600080fd5b505af1158015610726573d6000803e3d6000fd5b5050505060008411156107c7576040516370a0823160e01b81526000906001600160a01b038716906370a0823190610762903090600401611cf8565b60206040518083038186803b15801561077a57600080fd5b505afa15801561078e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107b29190611bc6565b905080156107c5576107c586338361183f565b505b95945050505050565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610800903390600401611cf8565b60206040518083038186803b15801561081857600080fd5b505afa15801561082c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108509190611b92565b61086c5760405162461bcd60e51b81526004016105c29061225f565b6009805460ff1916911515919091179055565b60095460009060ff16156109be5760005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb3906108bd903390600401611cf8565b60206040518083038186803b1580156108d557600080fd5b505afa1580156108e9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061090d9190611b92565b80610993575060005460405163099db01760e01b81526001600160a01b039091169063099db01790610943903390600401611cf8565b60206040518083038186803b15801561095b57600080fd5b505afa15801561096f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109939190611b92565b806109a257506109a233610d22565b6109be5760405162461bcd60e51b81526004016105c290611e89565b6040805180820182526008546001600160801b038082168352600160801b90910463ffffffff16602080840191909152600087815260049091529290922054815191926001600160a01b039091169116341015610a2d5760405162461bcd60e51b81526004016105c29061201f565b6001600160a01b038116610a535760405162461bcd60e51b81526004016105c290612069565b6000346001600160a01b03861615801590610a8157506009546001600160a01b038781166101009092041614155b15610ab8576103e8846020015163ffffffff1682610a9f919061234d565b610aa9919061232d565b9150610ab5828261236c565b90505b600354604051631f54245b60e01b81526001600160a01b0390911690631f54245b90610aeb908690600090600401611d30565b602060405180830381600087803b158015610b0557600080fd5b505af1158015610b19573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b3d9190611a72565b94506040518060600160405280600115158152602001610b5c89611864565b67ffffffffffffffff168152602001610b79600180549050611736565b6001600160801b039081169091526001600160a01b038716600081815260076020908152604080832086518154938801519783015160ff199094169015151768ffffffffffffffff00191661010067ffffffffffffffff909816979097029690961778ffffffffffffffffffffffffffffffff0000000000000000001916600160481b92909516919091029390931790935560018054808201825593527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf690920180546001600160a01b031916831790555133907fe63e6130091e2155004c4b5ac35e8fb9be704d6637ff3068a8f710ba36c9f41a90610c7a908790611cf8565b60405180910390a38015610cc8576009546040516101009091046001600160a01b0316906108fc8315029083906000818181858888f19350505050158015610cc6573d6000803e3d6000fd5b505b8115610d06576040516001600160a01b0387169083156108fc029084906000818181858888f19350505050158015610d04573d6000803e3d6000fd5b505b5050505092915050565b60066020526000908152604090205481565b60008054604051632474521560e21b81526001600160a01b03909116906391d1485490610d75907f185f85149db0f205130703941d0f9ccd8133e50df5d5080231c7704337aa2c38908690600401611dff565b60206040518083038186803b158015610d8d57600080fd5b505afa158015610da1573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610dc59190611b92565b90505b919050565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610dfd903390600401611cf8565b60206040518083038186803b158015610e1557600080fd5b505afa158015610e29573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e4d9190611b92565b610e695760405162461bcd60e51b81526004016105c290611e45565b6103e8811115610e8b5760405162461bcd60e51b81526004016105c2906121e2565b610e948161188e565b6008805463ffffffff92909216600160801b0263ffffffff60801b1990921691909117905550565b6000908152600460205260409020546001600160a01b031690565b7f185f85149db0f205130703941d0f9ccd8133e50df5d5080231c7704337aa2c3881565b60015490565b60018181548110610f1157600080fd5b6000918252602090912001546001600160a01b0316905081565b60025481565b60095461010090046001600160a01b031681565b6000546001600160a01b031681565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390610f84903390600401611cf8565b60206040518083038186803b158015610f9c57600080fd5b505afa158015610fb0573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610fd49190611b92565b610ff05760405162461bcd60e51b81526004016105c29061225f565b6000818152600460205260409020546001600160a01b03166110245760405162461bcd60e51b81526004016105c2906121a0565b600081815260046020818152604092839020548351630d9f230760e11b8152935186946001600160a01b0390921693631b3e460e938382019390929190829003018186803b15801561107557600080fd5b505afa158015611089573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906110ad9190611bc6565b146110ca5760405162461bcd60e51b81526004016105c290611fdb565b60009182526006602052604090912055565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb39061110c903390600401611cf8565b60206040518083038186803b15801561112457600080fd5b505afa158015611138573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061115c9190611b92565b6111785760405162461bcd60e51b81526004016105c29061213a565b6001600160a01b03811661118b57600080fd5b600980546001600160a01b0390921661010002610100600160a81b0319909216919091179055565b6008546001600160801b03811690600160801b900463ffffffff1682565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390611201903390600401611cf8565b60206040518083038186803b15801561121957600080fd5b505afa15801561122d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906112519190611b92565b806112d75750600054604051637e271f0560e11b81526001600160a01b039091169063fc4e3e0a90611287903390600401611cf8565b60206040518083038186803b15801561129f57600080fd5b505afa1580156112b3573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906112d79190611b92565b6112f35760405162461bcd60e51b81526004016105c290611e45565b6112fc816118b4565b50565b6001600160a01b0316600090815260076020526040902054610100900467ffffffffffffffff1690565b6003546001600160a01b031681565b60005460405163c395fcb360e01b81526001600160a01b039091169063c395fcb390611368903390600401611cf8565b60206040518083038186803b15801561138057600080fd5b505afa158015611394573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906113b89190611b92565b8061143e5750600054604051637e271f0560e11b81526001600160a01b039091169063fc4e3e0a906113ee903390600401611cf8565b60206040518083038186803b15801561140657600080fd5b505afa15801561141a573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061143e9190611b92565b61145a5760405162461bcd60e51b81526004016105c290611e45565b6000818152600460208181526040808420548151630d9f230760e11b815291516001600160a01b0390911694938593631b3e460e9380830193919290829003018186803b1580156114aa57600080fd5b505afa1580156114be573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906114e29190611bc6565b60008181526006602052604090205490915083141561150b576000818152600660205260408120555b600083815260046020908152604080832080546001600160a01b03191690556001600160a01b0385168352600590915280822091909155517f9e451d330e5bb7320c38b55046b66305a869486110a27e84e383b9b2a329875b906115729084908690611d5a565b60405180910390a1505050565b60095460ff1681565b6001600160a01b031660009081526005602052604090205490565b606060018054806020026020016040519081016040528092919081815260200182805480156115fb57602002820191906000526020600020905b81546001600160a01b031681526001909101906020018083116115dd575b5050505050905090565b600054600160a01b900460ff161561161c57600080fd5b6001600160a01b0383166116425760405162461bcd60e51b81526004016105c290611f4f565b6001600160a01b0382166116685760405162461bcd60e51b81526004016105c2906120eb565b600080546001600160a01b038086166001600160a01b0319928316178355600380549186169190921617905560028190555b81518110156116e5576116d38282815181106116c657634e487b7160e01b600052603260045260246000fd5b60200260200101516118b4565b806116dd81612383565b91505061169a565b506009805460ff191660011790556000805460ff60a01b1916600160a01b1790556040517f4b2ecdf8f830bb7e9a67fd6deffd1ce51740390bec9042b1baa6b539a9cdb53190611572903390611cf8565b60006001600160801b0382111561175f5760405162461bcd60e51b81526004016105c290611fa4565b5090565b600080846001600160a01b03166323b872dd85308660405160240161178a93929190611d0c565b6040516020818303038152906040529060e01b6020820180516001600160e01b0383818316178352505050506040516117c39190611cbf565b6000604051808303816000865af19150503d8060008114611800576040519150601f19603f3d011682016040523d82523d6000602084013e611805565b606091505b509150915081801561182f57508051158061182f57508080602001905181019061182f9190611b92565b61183857600080fd5b5050505050565b600080846001600160a01b031663a9059cbb858560405160240161178a929190611d5a565b600067ffffffffffffffff82111561175f5760405162461bcd60e51b81526004016105c2906120b4565b600063ffffffff82111561175f5760405162461bcd60e51b81526004016105c290612228565b6001600160a01b0381166118da5760405162461bcd60e51b81526004016105c290611ed5565b6001600160a01b038116600090815260056020526040902054156119105760405162461bcd60e51b81526004016105c290611f0c565b6000816001600160a01b0316631b3e460e6040518163ffffffff1660e01b815260040160206040518083038186803b15801561194b57600080fd5b505afa15801561195f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906119839190611bc6565b9050600081116119a55760405162461bcd60e51b81526004016105c2906122a0565b600280549060006119b583612383565b909155505060028054600090815260046020908152604080832080546001600160a01b0319166001600160a01b038816908117909155935493835260058252808320849055848352600690915290819020829055517f893e8595c407d2a22d29ff3ba939d15ec3966113ce988bd39c68e4b00350400791611a3891859190611d5a565b60405180910390a15050565b8035610dc8816123ca565b600060208284031215611a60578081fd5b8135611a6b816123ca565b9392505050565b600060208284031215611a83578081fd5b8151611a6b816123ca565b600080600060608486031215611aa2578182fd5b8335611aad816123ca565b9250602084810135611abe816123ca565b9250604085013567ffffffffffffffff80821115611ada578384fd5b818701915087601f830112611aed578384fd5b813581811115611aff57611aff6123b4565b83810260405185828201018181108582111715611b1e57611b1e6123b4565b604052828152858101935084860182860187018c1015611b3c578788fd5b8795505b83861015611b6557611b5181611a44565b855260019590950194938601938601611b40565b508096505050505050509250925092565b600060208284031215611b87578081fd5b8135611a6b816123df565b600060208284031215611ba3578081fd5b8151611a6b816123df565b600060208284031215611bbf578081fd5b5035919050565b600060208284031215611bd7578081fd5b5051919050565b60008060408385031215611bf0578182fd5b823591506020830135611c02816123ca565b809150509250929050565b600080600080600060808688031215611c24578081fd5b853594506020860135611c36816123ca565b935060408601359250606086013567ffffffffffffffff80821115611c59578283fd5b818801915088601f830112611c6c578283fd5b813581811115611c7a578384fd5b896020828501011115611c8b578384fd5b9699959850939650602001949392505050565b60008060408385031215611cb0578182fd5b50508035926020909101359150565b60008251815b81811015611cdf5760208186018101518583015201611cc5565b81811115611ced5782828501525b509190910192915050565b6001600160a01b0391909116815260200190565b6001600160a01b039384168152919092166020820152604081019190915260600190565b6001600160a01b039290921682526060602083018190526000908301521515604082015260800190565b6001600160a01b03929092168252602082015260400190565b6020808252825182820181905260009190848201906040850190845b81811015611db45783516001600160a01b031683529284019291840191600101611d8f565b50909695505050505050565b901515815260200190565b921515835267ffffffffffffffff9190911660208301526001600160801b0316604082015260600190565b90815260200190565b9182526001600160a01b0316602082015260400190565b60006020825282602083015282846040840137818301604090810191909152601f909201601f19160101919050565b60208082526024908201527f464c5942594d61726b65743a2053656e646572206d757374206265206f70657260408201526330ba37b960e11b606082015260800190565b6020808252602c908201527f464c5942594d61726b65743a2053656e646572206d757374206265206d696e7460408201526b195c881a59881b1bd8dad95960a21b606082015260800190565b6020808252601f908201527f464c5942594d61726b65743a20496e636f72726563742074656d706c61746500604082015260600190565b60208082526023908201527f464c5942594d61726b65743a2054656d706c61746520616c726561647920616460408201526219195960ea1b606082015260800190565b60208082526035908201527f696e6974464c5942594d61726b65743a20616363657373436f6e74726f6c732060408201527463616e6e6f742062652073657420746f207a65726f60581b606082015260800190565b6020808252601c908201527f426f72696e674d6174683a2075696e74313238204f766572666c6f7700000000604082015260600190565b60208082526024908201527f464c5942594d61726b65743a20696e636f7272656374205f74656d706c6174656040820152635479706560e01b606082015260800190565b6020808252602a908201527f464c5942594d61726b65743a204661696c656420746f207472616e73666572206040820152696d696e696d756d46656560b01b606082015260800190565b6020808252602b908201527f464c5942594d61726b65743a2041756374696f6e2074656d706c61746520646f60408201526a195cdb89dd08195e1a5cdd60aa1b606082015260800190565b6020808252601b908201527f426f72696e674d6174683a2075696e743634204f766572666c6f770000000000604082015260600190565b6020808252602f908201527f696e6974464c5942594d61726b65743a207370616365426f782063616e6e6f7460408201526e2062652073657420746f207a65726f60881b606082015260800190565b6020808252602b908201527f464c5942594d61726b65742e7365744465763a2053656e646572206d7573742060408201526a31329037b832b930ba37b960a91b606082015260800190565b6020808252600190820152603160f81b604082015260600190565b60208082526022908201527f464c5942594d61726b65743a20696e636f7272656374205f74656d706c617465604082015261125960f21b606082015260800190565b60208082526026908201527f464c5942594d61726b65743a2050657263656e74616765206973206f7574206f60408201526506620313030360d41b606082015260800190565b6020808252601b908201527f426f72696e674d6174683a2075696e743332204f766572666c6f770000000000604082015260600190565b60208082526021908201527f464c5942594d61726b65743a2053656e646572206d7573742062652061646d696040820152603760f91b606082015260800190565b60208082526025908201527f464c5942594d61726b65743a20496e636f72726563742074656d706c61746520604082015264031b7b232960dd1b606082015260800190565b6001600160801b0391909116815260200190565b6001600160801b0392909216825263ffffffff16602082015260400190565b67ffffffffffffffff91909116815260200190565b60008261234857634e487b7160e01b81526012600452602481fd5b500490565b60008160001904831182151516156123675761236761239e565b500290565b60008282101561237e5761237e61239e565b500390565b60006000198214156123975761239761239e565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052604160045260246000fd5b6001600160a01b03811681146112fc57600080fd5b80151581146112fc57600080fdfea2646970667358221220eb245696830b6fdb98fda5ced96a0a7f538e4dee529f5541c59302677599c80b64736f6c63430008000033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 7812,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "accessControls",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_contract(FLYBYAccessControls)208"
+      },
+      {
+        "astId": 7819,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "initialised",
+        "offset": 20,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 7829,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "auctions",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_address)dyn_storage"
+      },
+      {
+        "astId": 7831,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "auctionTemplateId",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 7834,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "spaceBox",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_contract(ISpaceBoxFactory)11373"
+      },
+      {
+        "astId": 7838,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "auctionTemplates",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_uint256,t_address)"
+      },
+      {
+        "astId": 7842,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "auctionTemplateToId",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 7846,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "currentTemplateId",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_mapping(t_uint256,t_uint256)"
+      },
+      {
+        "astId": 7851,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "auctionInfo",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_mapping(t_address,t_struct(Auction)7826_storage)"
+      },
+      {
+        "astId": 7859,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "marketFees",
+        "offset": 0,
+        "slot": "8",
+        "type": "t_struct(MarketFees)7856_storage"
+      },
+      {
+        "astId": 7861,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "locked",
+        "offset": 0,
+        "slot": "9",
+        "type": "t_bool"
+      },
+      {
+        "astId": 7863,
+        "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+        "label": "flybyDiv",
+        "offset": 1,
+        "slot": "9",
+        "type": "t_address_payable"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_address_payable": {
+        "encoding": "inplace",
+        "label": "address payable",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_contract(FLYBYAccessControls)208": {
+        "encoding": "inplace",
+        "label": "contract FLYBYAccessControls",
+        "numberOfBytes": "20"
+      },
+      "t_contract(ISpaceBoxFactory)11373": {
+        "encoding": "inplace",
+        "label": "contract ISpaceBoxFactory",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_struct(Auction)7826_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct FLYBYMarket.Auction)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Auction)7826_storage"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint256,t_address)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_uint256,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_struct(Auction)7826_storage": {
+        "encoding": "inplace",
+        "label": "struct FLYBYMarket.Auction",
+        "members": [
+          {
+            "astId": 7821,
+            "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+            "label": "exists",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool"
+          },
+          {
+            "astId": 7823,
+            "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+            "label": "templateId",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_uint64"
+          },
+          {
+            "astId": 7825,
+            "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+            "label": "index",
+            "offset": 9,
+            "slot": "0",
+            "type": "t_uint128"
+          }
+        ],
+        "numberOfBytes": "32"
+      },
+      "t_struct(MarketFees)7856_storage": {
+        "encoding": "inplace",
+        "label": "struct FLYBYMarket.MarketFees",
+        "members": [
+          {
+            "astId": 7853,
+            "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+            "label": "minimumFee",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint128"
+          },
+          {
+            "astId": 7855,
+            "contract": "contracts/FLYBYMarket.sol:FLYBYMarket",
+            "label": "integratorFeePct",
+            "offset": 16,
+            "slot": "0",
+            "type": "t_uint32"
+          }
+        ],
+        "numberOfBytes": "32"
+      },
+      "t_uint128": {
+        "encoding": "inplace",
+        "label": "uint128",
+        "numberOfBytes": "16"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      },
+      "t_uint64": {
+        "encoding": "inplace",
+        "label": "uint64",
+        "numberOfBytes": "8"
+      }
+    }
+  }
+}

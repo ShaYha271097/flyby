@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* @media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+} */
+
+.HoverNav:focus,
+.HoverNav:hover {
+    background-image: linear-gradient(
+        -225deg,
+        #7cf95b 0%,
+        #7cf95b 29%,
+        #e1a2ec 67%,
+        #f874ff 100%
+    );
+    animation: textclip 3s linear infinite;
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Legend:hover .HoverHome,
+.HoverHome:focus,
+.HoverHome:hover {
+    cursor: pointer;
+    background-image: linear-gradient(
+        -225deg,
+        #7cf95b 0%,
+        #7cf95b 29%,
+        #70dfe5 67%,
+        #3961cf 100%
+    );
+    animation: textclip 3s linear infinite;
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes textclip {
+    to {
+        background-position: -200% center;
+    }
+}
+
